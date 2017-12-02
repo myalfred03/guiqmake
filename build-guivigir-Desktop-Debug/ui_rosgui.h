@@ -183,7 +183,7 @@ public:
     {
         if (ROSGUI->objectName().isEmpty())
             ROSGUI->setObjectName(QStringLiteral("ROSGUI"));
-        ROSGUI->resize(1380, 720);
+        ROSGUI->resize(823, 807);
         QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -1070,7 +1070,7 @@ public:
         ROSGUI->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ROSGUI);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1380, 19));
+        menuBar->setGeometry(QRect(0, 0, 823, 19));
         menuFILE = new QMenu(menuBar);
         menuFILE->setObjectName(QStringLiteral("menuFILE"));
         ROSGUI->setMenuBar(menuBar);
