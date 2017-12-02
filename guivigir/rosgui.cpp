@@ -1,3 +1,4 @@
+#include <QDesktopWidget>
 #include "rosgui.h"
 #include "ui_rosgui.h"
 #include "ui_mainwindow.h"
@@ -9,7 +10,15 @@ ROSGUI::ROSGUI(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ROSGUI)
 {
+
+//    this->showMaximized();
+    QDesktopWidget desktop;
+
+    int desktopHeight=desktop.geometry().height();
+    int desktopWidth=desktop.geometry().width();
+    this->resize(desktopWidth,desktopHeight);
     ui->setupUi(this);
+
     QPixmap pix(":/images/img/Uni.jpg");
     ui->label_3->setPixmap(pix);
 

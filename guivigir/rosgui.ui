@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1038</width>
-    <height>710</height>
-   </rect>
-  </property>
-  <property name="maximumSize">
-   <size>
     <width>1380</width>
     <height>720</height>
-   </size>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="sizeIncrement">
    <size>
@@ -1125,7 +1125,7 @@
               <property name="currentIndex">
                <number>1</number>
               </property>
-              <widget class="QWidget" name="tabWidgetPage1" native="true">
+              <widget class="QWidget" name="tabWidgetPage1">
                <attribute name="title">
                 <string>Robots Industriales</string>
                </attribute>
@@ -1187,11 +1187,8 @@
                  </widget>
                 </item>
                </layout>
-               <zorder>gridGroupBox_2</zorder>
-               <zorder>gridGroupBox_2</zorder>
-               <zorder>gridGroupBox_3</zorder>
               </widget>
-              <widget class="QWidget" name="tabWidgetPage2" native="true">
+              <widget class="QWidget" name="tabWidgetPage2">
                <attribute name="title">
                 <string>Robots Simples</string>
                </attribute>
@@ -1247,9 +1244,6 @@
                  </widget>
                 </item>
                </layout>
-               <zorder>gridGroupBox_2</zorder>
-               <zorder>gridGroupBox_2</zorder>
-               <zorder>gridGroupBox_2</zorder>
               </widget>
              </widget>
             </item>
@@ -1336,12 +1330,6 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-              <property name="maximumSize">
-               <size>
-                <width>800</width>
-                <height>520</height>
-               </size>
-              </property>
              </widget>
             </item>
            </layout>
@@ -1386,8 +1374,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1038</width>
-     <height>18</height>
+     <width>1380</width>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFILE">
