@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>807</height>
+    <height>844</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -74,7 +74,7 @@
              <bool>true</bool>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -1123,7 +1123,7 @@
                </font>
               </property>
               <property name="currentIndex">
-               <number>1</number>
+               <number>0</number>
               </property>
               <widget class="QWidget" name="tabWidgetPage1">
                <attribute name="title">
@@ -1144,42 +1144,116 @@
                     <height>100</height>
                    </size>
                   </property>
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
                   <property name="title">
                    <string/>
                   </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout">
-                   <item>
+                  <layout class="QGridLayout" name="gridLayout_17">
+                   <item row="0" column="0">
                     <widget class="QCheckBox" name="checkBox4DOFI">
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
                      <property name="text">
-                      <string>KK KR210</string>
+                      <string>KR210</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/images/img/1448635827949.png</normaloff>:/images/img/1448635827949.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>37</width>
+                       <height>23</height>
+                      </size>
                      </property>
                     </widget>
                    </item>
-                   <item>
-                    <widget class="QCheckBox" name="checkBox2DOFI">
-                     <property name="text">
-                      <string>ABB IRB5400</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
+                   <item row="0" column="2">
                     <widget class="QCheckBox" name="checkBox6DOFI">
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
                      <property name="text">
-                      <string>ABB IRB120</string>
+                      <string>IRB120</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/images/img/ABB.png</normaloff>:/images/img/ABB.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>27</width>
+                       <height>24</height>
+                      </size>
                      </property>
                     </widget>
                    </item>
-                   <item>
-                    <widget class="QCheckBox" name="checkBox5DOFI">
-                     <property name="text">
-                      <string>MM MH5</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
+                   <item row="0" column="4">
                     <widget class="QCheckBox" name="checkBox3DOFI">
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
                      <property name="text">
-                      <string>MM BMDA3</string>
+                      <string>BMDA3</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/images/img/Yaskawa_Motoman_Logo.png</normaloff>:/images/img/Yaskawa_Motoman_Logo.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>28</width>
+                       <height>23</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="checkBox5DOFI">
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
+                     <property name="text">
+                      <string>MH5</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/images/img/Yaskawa_Motoman_Logo.png</normaloff>:/images/img/Yaskawa_Motoman_Logo.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>28</width>
+                       <height>23</height>
+                      </size>
+                     </property>
+                     <property name="tristate">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QCheckBox" name="checkBox2DOFI">
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
+                     <property name="text">
+                      <string>IRB5400</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resources.qrc">
+                       <normaloff>:/images/img/ABB.png</normaloff>:/images/img/ABB.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>27</width>
+                       <height>24</height>
+                      </size>
                      </property>
                     </widget>
                    </item>
@@ -1281,6 +1355,29 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QComboBox" name="comboBox">
+              <item>
+               <property name="text">
+                <string>New Item</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/images/img/noun_1450480_cc.png</normaloff>:/images/img/noun_1450480_cc.png</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>New Item</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <activeoff>:/images/img/noun_1036042_cc.png</activeoff>
+                </iconset>
+               </property>
+              </item>
+             </widget>
+            </item>
             <item>
              <widget class="QLabel" name="label_23">
               <property name="font">

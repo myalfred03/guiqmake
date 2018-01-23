@@ -21,6 +21,8 @@ ROSGUI::ROSGUI(QWidget *parent) :
 
     QPixmap pix(":/images/img/Uni.jpg");
     ui->label_3->setPixmap(pix);
+//    QImage pix2(":/images/img/noun_1036042_cc.png");
+//    ui->mdiArea_2->setBackground(pix2);
 
         connect(ui->xSlider, SIGNAL(valueChanged(int)), SLOT(updateSpinboxes()));
         connect(ui->ySlider, SIGNAL(valueChanged(int)), SLOT(updateSpinboxes()));
