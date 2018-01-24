@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1050</width>
     <height>844</height>
    </rect>
   </property>
@@ -1377,7 +1377,16 @@
               </item>
               <item>
                <property name="text">
-                <string>Show Arrow with Names</string>
+                <string>Show Robot with Arrows</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/images/img/noun_1035985_cc (1).png</normaloff>:/images/img/noun_1035985_cc (1).png</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Show Arrows with Names</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -1488,7 +1497,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>1050</width>
      <height>19</height>
     </rect>
    </property>
