@@ -424,6 +424,7 @@ compiler_rcc_clean:
 qrc_resources.cpp: ../guivigir/resources.qrc \
 		../guivigir/img/CI.png \
 		../guivigir/img/noun_1036042_cc.png \
+		../guivigir/img/noun_319786_cc.png \
 		../guivigir/img/CD.png \
 		../guivigir/img/dhparameter.png \
 		../guivigir/img/AS.png \
@@ -431,11 +432,13 @@ qrc_resources.cpp: ../guivigir/resources.qrc \
 		../guivigir/img/ROS_INDUSTRIAL.png \
 		../guivigir/img/ros.png \
 		../guivigir/img/Yaskawa_Motoman_Logo.png \
+		../guivigir/img/noun_1036029_cc.png \
 		../guivigir/img/ABB.png \
 		../guivigir/img/noun_1450480_cc.png \
 		../guivigir/img/ROS_INDUSTRIAL.jpg \
 		../guivigir/img/ros.jpg \
-		../guivigir/img/1448635827949.png
+		../guivigir/img/1448635827949.png \
+		../guivigir/img/noun_.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name resources ../guivigir/resources.qrc -o qrc_resources.cpp
 
 compiler_moc_header_make_all: moc_rosgui.cpp moc_secondwindow.cpp moc_thirdwindow.cpp moc_fourth.cpp

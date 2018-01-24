@@ -1028,11 +1028,17 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         comboBox = new QComboBox(centralWidget);
         QIcon icon4;
-        icon4.addFile(QStringLiteral(":/images/img/noun_1450480_cc.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QStringLiteral(":/images/img/noun_1036029_cc.png"), QSize(), QIcon::Normal, QIcon::Off);
         comboBox->addItem(icon4, QString());
         QIcon icon5;
-        icon5.addFile(QStringLiteral(":/images/img/noun_1036042_cc.png"), QSize(), QIcon::Active, QIcon::Off);
+        icon5.addFile(QStringLiteral(":/images/img/noun_.png"), QSize(), QIcon::Normal, QIcon::Off);
         comboBox->addItem(icon5, QString());
+        QIcon icon6;
+        icon6.addFile(QStringLiteral(":/images/img/noun_319786_cc.png"), QSize(), QIcon::Normal, QIcon::Off);
+        comboBox->addItem(icon6, QString());
+        QIcon icon7;
+        icon7.addFile(QStringLiteral(":/images/img/noun_1450480_cc.png"), QSize(), QIcon::Normal, QIcon::Off);
+        comboBox->addItem(icon7, QString());
         comboBox->setObjectName(QStringLiteral("comboBox"));
 
         horizontalLayout_3->addWidget(comboBox);
@@ -1260,8 +1266,10 @@ public:
         checkBox3DOFs->setText(QApplication::translate("ROSGUI", "3DOF", 0));
         checkBox2DOFs->setText(QApplication::translate("ROSGUI", "2DOF", 0));
         tabWidget1->setTabText(tabWidget1->indexOf(tabWidgetPage2), QApplication::translate("ROSGUI", "Robots Simples", 0));
-        comboBox->setItemText(0, QApplication::translate("ROSGUI", "New Item", 0));
-        comboBox->setItemText(1, QApplication::translate("ROSGUI", "New Item", 0));
+        comboBox->setItemText(0, QApplication::translate("ROSGUI", "Show All", 0));
+        comboBox->setItemText(1, QApplication::translate("ROSGUI", "Show Robot", 0));
+        comboBox->setItemText(2, QApplication::translate("ROSGUI", "Show Arrow with Names", 0));
+        comboBox->setItemText(3, QApplication::translate("ROSGUI", "Show Arrows", 0));
 
         label_23->setText(QApplication::translate("ROSGUI", "RVIZ  TOOLS", 0));
         checkBox_2->setText(QApplication::translate("ROSGUI", "TF ", 0));
