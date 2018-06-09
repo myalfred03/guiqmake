@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>StatePage.qml</file>
+        <file>background02.png</file>
+        <file>ReFormation Sans Regular.ttf</file>
+        <file>background.jpg</file>
+        <file>UNI-LOGO.png</file>
+    </qresource>
+</RCC>

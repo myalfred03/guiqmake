@@ -332,7 +332,7 @@ public:
         pushButton->setGeometry(QRect(320, 370, 80, 22));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(20, 20, 521, 301));
+        label_3->setGeometry(QRect(60, 30, 441, 291));
         tabWidget->addTab(tab, QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QStringLiteral("INICIO"));
         tab_2 = new QWidget();
@@ -1673,7 +1673,7 @@ public:
         ROSGUI->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ROSGUI);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1497, 18));
+        menuBar->setGeometry(QRect(0, 0, 1497, 19));
         menuFILE = new QMenu(menuBar);
         menuFILE->setObjectName(QStringLiteral("menuFILE"));
         ROSGUI->setMenuBar(menuBar);
@@ -1742,7 +1742,7 @@ public:
         QObject::connect(checkBox5DOFs, SIGNAL(toggled(bool)), gridGroupBox_3, SLOT(setDisabled(bool)));
         QObject::connect(checkBox6DOFs, SIGNAL(toggled(bool)), checkBox5DOFs, SLOT(setDisabled(bool)));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
         tabWidget1->setCurrentIndex(1);
 
 
@@ -1886,7 +1886,7 @@ public:
         comboBox->setItemText(4, QApplication::translate("ROSGUI", "Show Axes", Q_NULLPTR));
 
         label_23->setText(QApplication::translate("ROSGUI", "RVIZ  TOOLS", Q_NULLPTR));
-        label->setText(QApplication::translate("ROSGUI", "LABORATORIO VIRTUAL ROB\303\223TICA B\303\201SICA", Q_NULLPTR));
+        label->setText(QApplication::translate("ROSGUI", "ESCENARIO VIRTUAL ROB\303\223TICA INDUSTRIAL", Q_NULLPTR));
         menuFILE->setTitle(QApplication::translate("ROSGUI", "FILE", Q_NULLPTR));
     } // retranslateUi
 

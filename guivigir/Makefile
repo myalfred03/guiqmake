@@ -321,6 +321,7 @@ qrc_resources.cpp: resources.qrc \
 		/opt/qt57/bin/rcc \
 		img/AS.png \
 		img/ROS_INDUSTRIAL.jpg \
+		img/UNI-LOGOa.png \
 		img/Yaskawa_Motoman_Logo.png \
 		img/noun_.png \
 		img/ABB.png \
@@ -906,7 +907,70 @@ main.o: main.cpp rosgui.h \
 		/opt/qt57/include/QtWidgets/qdesktopwidget.h \
 		/opt/qt57/include/QtGui/qguiapplication.h \
 		/opt/qt57/include/QtGui/qinputmethod.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/opt/qt57/include/QtCore/QVariant \
+		/opt/qt57/include/QtWidgets/QAction \
+		/opt/qt57/include/QtWidgets/qaction.h \
+		/opt/qt57/include/QtWidgets/qactiongroup.h \
+		/opt/qt57/include/QtWidgets/QButtonGroup \
+		/opt/qt57/include/QtWidgets/qbuttongroup.h \
+		/opt/qt57/include/QtWidgets/QCheckBox \
+		/opt/qt57/include/QtWidgets/qcheckbox.h \
+		/opt/qt57/include/QtWidgets/qabstractbutton.h \
+		/opt/qt57/include/QtWidgets/QDial \
+		/opt/qt57/include/QtWidgets/qdial.h \
+		/opt/qt57/include/QtWidgets/qabstractslider.h \
+		/opt/qt57/include/QtWidgets/QDoubleSpinBox \
+		/opt/qt57/include/QtWidgets/qspinbox.h \
+		/opt/qt57/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt57/include/QtGui/qvalidator.h \
+		/opt/qt57/include/QtCore/qregularexpression.h \
+		/opt/qt57/include/QtWidgets/QFrame \
+		/opt/qt57/include/QtWidgets/qframe.h \
+		/opt/qt57/include/QtWidgets/QGridLayout \
+		/opt/qt57/include/QtWidgets/qgridlayout.h \
+		/opt/qt57/include/QtWidgets/qlayout.h \
+		/opt/qt57/include/QtWidgets/qlayoutitem.h \
+		/opt/qt57/include/QtWidgets/qboxlayout.h \
+		/opt/qt57/include/QtWidgets/QGroupBox \
+		/opt/qt57/include/QtWidgets/qgroupbox.h \
+		/opt/qt57/include/QtWidgets/QHeaderView \
+		/opt/qt57/include/QtWidgets/qheaderview.h \
+		/opt/qt57/include/QtWidgets/qabstractitemview.h \
+		/opt/qt57/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt57/include/QtCore/qabstractitemmodel.h \
+		/opt/qt57/include/QtCore/qitemselectionmodel.h \
+		/opt/qt57/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt57/include/QtWidgets/qstyleoption.h \
+		/opt/qt57/include/QtWidgets/qslider.h \
+		/opt/qt57/include/QtWidgets/qstyle.h \
+		/opt/qt57/include/QtWidgets/qtabbar.h \
+		/opt/qt57/include/QtWidgets/qrubberband.h \
+		/opt/qt57/include/QtWidgets/QLabel \
+		/opt/qt57/include/QtWidgets/qlabel.h \
+		/opt/qt57/include/QtWidgets/QLineEdit \
+		/opt/qt57/include/QtWidgets/qlineedit.h \
+		/opt/qt57/include/QtGui/qtextcursor.h \
+		/opt/qt57/include/QtGui/qtextformat.h \
+		/opt/qt57/include/QtGui/qpen.h \
+		/opt/qt57/include/QtGui/qtextoption.h \
+		/opt/qt57/include/QtWidgets/QMdiArea \
+		/opt/qt57/include/QtWidgets/qmdiarea.h \
+		/opt/qt57/include/QtWidgets/QMenuBar \
+		/opt/qt57/include/QtWidgets/qmenubar.h \
+		/opt/qt57/include/QtWidgets/qmenu.h \
+		/opt/qt57/include/QtWidgets/QPushButton \
+		/opt/qt57/include/QtWidgets/qpushbutton.h \
+		/opt/qt57/include/QtWidgets/QSlider \
+		/opt/qt57/include/QtWidgets/QStatusBar \
+		/opt/qt57/include/QtWidgets/qstatusbar.h \
+		/opt/qt57/include/QtWidgets/QTabWidget \
+		/opt/qt57/include/QtWidgets/QTableWidget \
+		/opt/qt57/include/QtWidgets/qtablewidget.h \
+		/opt/qt57/include/QtWidgets/qtableview.h \
+		/opt/qt57/include/QtWidgets/QToolBox \
+		/opt/qt57/include/QtWidgets/qtoolbox.h \
+		/opt/qt57/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 rosgui.o: rosgui.cpp /opt/qt57/include/QtWidgets/QDesktopWidget \
@@ -1016,7 +1080,84 @@ rosgui.o: rosgui.cpp /opt/qt57/include/QtWidgets/QDesktopWidget \
 		thirdwindow.h \
 		fourth.h \
 		ui_rosgui.h \
-		ui_mainwindow.h
+		/opt/qt57/include/QtCore/QVariant \
+		/opt/qt57/include/QtWidgets/QAction \
+		/opt/qt57/include/QtWidgets/qaction.h \
+		/opt/qt57/include/QtWidgets/qactiongroup.h \
+		/opt/qt57/include/QtWidgets/QApplication \
+		/opt/qt57/include/QtWidgets/qapplication.h \
+		/opt/qt57/include/QtCore/qcoreapplication.h \
+		/opt/qt57/include/QtCore/qeventloop.h \
+		/opt/qt57/include/QtGui/qguiapplication.h \
+		/opt/qt57/include/QtGui/qinputmethod.h \
+		/opt/qt57/include/QtWidgets/QButtonGroup \
+		/opt/qt57/include/QtWidgets/qbuttongroup.h \
+		/opt/qt57/include/QtWidgets/QCheckBox \
+		/opt/qt57/include/QtWidgets/qcheckbox.h \
+		/opt/qt57/include/QtWidgets/qabstractbutton.h \
+		/opt/qt57/include/QtWidgets/QComboBox \
+		/opt/qt57/include/QtWidgets/qcombobox.h \
+		/opt/qt57/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt57/include/QtWidgets/qstyleoption.h \
+		/opt/qt57/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt57/include/QtGui/qvalidator.h \
+		/opt/qt57/include/QtCore/qregularexpression.h \
+		/opt/qt57/include/QtWidgets/qslider.h \
+		/opt/qt57/include/QtWidgets/qabstractslider.h \
+		/opt/qt57/include/QtWidgets/qstyle.h \
+		/opt/qt57/include/QtWidgets/qtabbar.h \
+		/opt/qt57/include/QtWidgets/qrubberband.h \
+		/opt/qt57/include/QtWidgets/qframe.h \
+		/opt/qt57/include/QtCore/qabstractitemmodel.h \
+		/opt/qt57/include/QtWidgets/QDial \
+		/opt/qt57/include/QtWidgets/qdial.h \
+		/opt/qt57/include/QtWidgets/QDoubleSpinBox \
+		/opt/qt57/include/QtWidgets/qspinbox.h \
+		/opt/qt57/include/QtWidgets/QFrame \
+		/opt/qt57/include/QtWidgets/QGridLayout \
+		/opt/qt57/include/QtWidgets/qgridlayout.h \
+		/opt/qt57/include/QtWidgets/qlayout.h \
+		/opt/qt57/include/QtWidgets/qlayoutitem.h \
+		/opt/qt57/include/QtWidgets/qboxlayout.h \
+		/opt/qt57/include/QtWidgets/QGroupBox \
+		/opt/qt57/include/QtWidgets/qgroupbox.h \
+		/opt/qt57/include/QtWidgets/QHBoxLayout \
+		/opt/qt57/include/QtWidgets/QHeaderView \
+		/opt/qt57/include/QtWidgets/qheaderview.h \
+		/opt/qt57/include/QtWidgets/qabstractitemview.h \
+		/opt/qt57/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt57/include/QtCore/qitemselectionmodel.h \
+		/opt/qt57/include/QtWidgets/QLabel \
+		/opt/qt57/include/QtWidgets/qlabel.h \
+		/opt/qt57/include/QtWidgets/QMdiArea \
+		/opt/qt57/include/QtWidgets/qmdiarea.h \
+		/opt/qt57/include/QtWidgets/QMenu \
+		/opt/qt57/include/QtWidgets/qmenu.h \
+		/opt/qt57/include/QtWidgets/QMenuBar \
+		/opt/qt57/include/QtWidgets/qmenubar.h \
+		/opt/qt57/include/QtWidgets/QPushButton \
+		/opt/qt57/include/QtWidgets/qpushbutton.h \
+		/opt/qt57/include/QtWidgets/QSlider \
+		/opt/qt57/include/QtWidgets/QSpacerItem \
+		/opt/qt57/include/QtWidgets/QStatusBar \
+		/opt/qt57/include/QtWidgets/qstatusbar.h \
+		/opt/qt57/include/QtWidgets/QTabWidget \
+		/opt/qt57/include/QtWidgets/QTableWidget \
+		/opt/qt57/include/QtWidgets/qtablewidget.h \
+		/opt/qt57/include/QtWidgets/qtableview.h \
+		/opt/qt57/include/QtWidgets/QToolBar \
+		/opt/qt57/include/QtWidgets/qtoolbar.h \
+		/opt/qt57/include/QtWidgets/QVBoxLayout \
+		/opt/qt57/include/QtWidgets/QWidget \
+		ui_mainwindow.h \
+		/opt/qt57/include/QtWidgets/QLineEdit \
+		/opt/qt57/include/QtWidgets/qlineedit.h \
+		/opt/qt57/include/QtGui/qtextcursor.h \
+		/opt/qt57/include/QtGui/qtextformat.h \
+		/opt/qt57/include/QtGui/qpen.h \
+		/opt/qt57/include/QtGui/qtextoption.h \
+		/opt/qt57/include/QtWidgets/QToolBox \
+		/opt/qt57/include/QtWidgets/qtoolbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rosgui.o rosgui.cpp
 
 secondwindow.o: secondwindow.cpp secondwindow.h \
@@ -1123,7 +1264,49 @@ secondwindow.o: secondwindow.cpp secondwindow.h \
 		rosgui.h \
 		thirdwindow.h \
 		fourth.h \
-		ui_secondwindow.h
+		ui_secondwindow.h \
+		/opt/qt57/include/QtCore/QVariant \
+		/opt/qt57/include/QtWidgets/QAction \
+		/opt/qt57/include/QtWidgets/qaction.h \
+		/opt/qt57/include/QtWidgets/qactiongroup.h \
+		/opt/qt57/include/QtWidgets/QApplication \
+		/opt/qt57/include/QtWidgets/qapplication.h \
+		/opt/qt57/include/QtCore/qcoreapplication.h \
+		/opt/qt57/include/QtCore/qeventloop.h \
+		/opt/qt57/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt57/include/QtGui/qguiapplication.h \
+		/opt/qt57/include/QtGui/qinputmethod.h \
+		/opt/qt57/include/QtWidgets/QButtonGroup \
+		/opt/qt57/include/QtWidgets/qbuttongroup.h \
+		/opt/qt57/include/QtWidgets/QFrame \
+		/opt/qt57/include/QtWidgets/qframe.h \
+		/opt/qt57/include/QtWidgets/QHeaderView \
+		/opt/qt57/include/QtWidgets/qheaderview.h \
+		/opt/qt57/include/QtWidgets/qabstractitemview.h \
+		/opt/qt57/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt57/include/QtCore/qabstractitemmodel.h \
+		/opt/qt57/include/QtCore/qitemselectionmodel.h \
+		/opt/qt57/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt57/include/QtWidgets/qstyleoption.h \
+		/opt/qt57/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt57/include/QtGui/qvalidator.h \
+		/opt/qt57/include/QtCore/qregularexpression.h \
+		/opt/qt57/include/QtWidgets/qslider.h \
+		/opt/qt57/include/QtWidgets/qabstractslider.h \
+		/opt/qt57/include/QtWidgets/qstyle.h \
+		/opt/qt57/include/QtWidgets/qtabbar.h \
+		/opt/qt57/include/QtWidgets/qrubberband.h \
+		/opt/qt57/include/QtWidgets/QLabel \
+		/opt/qt57/include/QtWidgets/qlabel.h \
+		/opt/qt57/include/QtWidgets/QMenuBar \
+		/opt/qt57/include/QtWidgets/qmenubar.h \
+		/opt/qt57/include/QtWidgets/qmenu.h \
+		/opt/qt57/include/QtWidgets/QPushButton \
+		/opt/qt57/include/QtWidgets/qpushbutton.h \
+		/opt/qt57/include/QtWidgets/qabstractbutton.h \
+		/opt/qt57/include/QtWidgets/QStatusBar \
+		/opt/qt57/include/QtWidgets/qstatusbar.h \
+		/opt/qt57/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o secondwindow.o secondwindow.cpp
 
 thirdwindow.o: thirdwindow.cpp thirdwindow.h \
@@ -1228,6 +1411,48 @@ thirdwindow.o: thirdwindow.cpp thirdwindow.h \
 		/opt/qt57/include/QtWidgets/qtabwidget.h \
 		/opt/qt57/include/QtGui/qicon.h \
 		ui_thirdwindow.h \
+		/opt/qt57/include/QtCore/QVariant \
+		/opt/qt57/include/QtWidgets/QAction \
+		/opt/qt57/include/QtWidgets/qaction.h \
+		/opt/qt57/include/QtWidgets/qactiongroup.h \
+		/opt/qt57/include/QtWidgets/QApplication \
+		/opt/qt57/include/QtWidgets/qapplication.h \
+		/opt/qt57/include/QtCore/qcoreapplication.h \
+		/opt/qt57/include/QtCore/qeventloop.h \
+		/opt/qt57/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt57/include/QtGui/qguiapplication.h \
+		/opt/qt57/include/QtGui/qinputmethod.h \
+		/opt/qt57/include/QtWidgets/QButtonGroup \
+		/opt/qt57/include/QtWidgets/qbuttongroup.h \
+		/opt/qt57/include/QtWidgets/QFrame \
+		/opt/qt57/include/QtWidgets/qframe.h \
+		/opt/qt57/include/QtWidgets/QHeaderView \
+		/opt/qt57/include/QtWidgets/qheaderview.h \
+		/opt/qt57/include/QtWidgets/qabstractitemview.h \
+		/opt/qt57/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt57/include/QtCore/qabstractitemmodel.h \
+		/opt/qt57/include/QtCore/qitemselectionmodel.h \
+		/opt/qt57/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt57/include/QtWidgets/qstyleoption.h \
+		/opt/qt57/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt57/include/QtGui/qvalidator.h \
+		/opt/qt57/include/QtCore/qregularexpression.h \
+		/opt/qt57/include/QtWidgets/qslider.h \
+		/opt/qt57/include/QtWidgets/qabstractslider.h \
+		/opt/qt57/include/QtWidgets/qstyle.h \
+		/opt/qt57/include/QtWidgets/qtabbar.h \
+		/opt/qt57/include/QtWidgets/qrubberband.h \
+		/opt/qt57/include/QtWidgets/QLabel \
+		/opt/qt57/include/QtWidgets/qlabel.h \
+		/opt/qt57/include/QtWidgets/QMenuBar \
+		/opt/qt57/include/QtWidgets/qmenubar.h \
+		/opt/qt57/include/QtWidgets/qmenu.h \
+		/opt/qt57/include/QtWidgets/QPushButton \
+		/opt/qt57/include/QtWidgets/qpushbutton.h \
+		/opt/qt57/include/QtWidgets/qabstractbutton.h \
+		/opt/qt57/include/QtWidgets/QStatusBar \
+		/opt/qt57/include/QtWidgets/qstatusbar.h \
+		/opt/qt57/include/QtWidgets/QWidget \
 		rosgui.h \
 		secondwindow.h \
 		fourth.h
@@ -1334,7 +1559,49 @@ fourth.o: fourth.cpp fourth.h \
 		/opt/qt57/include/QtGui/qtouchdevice.h \
 		/opt/qt57/include/QtWidgets/qtabwidget.h \
 		/opt/qt57/include/QtGui/qicon.h \
-		ui_fourth.h
+		ui_fourth.h \
+		/opt/qt57/include/QtCore/QVariant \
+		/opt/qt57/include/QtWidgets/QAction \
+		/opt/qt57/include/QtWidgets/qaction.h \
+		/opt/qt57/include/QtWidgets/qactiongroup.h \
+		/opt/qt57/include/QtWidgets/QApplication \
+		/opt/qt57/include/QtWidgets/qapplication.h \
+		/opt/qt57/include/QtCore/qcoreapplication.h \
+		/opt/qt57/include/QtCore/qeventloop.h \
+		/opt/qt57/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt57/include/QtGui/qguiapplication.h \
+		/opt/qt57/include/QtGui/qinputmethod.h \
+		/opt/qt57/include/QtWidgets/QButtonGroup \
+		/opt/qt57/include/QtWidgets/qbuttongroup.h \
+		/opt/qt57/include/QtWidgets/QFrame \
+		/opt/qt57/include/QtWidgets/qframe.h \
+		/opt/qt57/include/QtWidgets/QHeaderView \
+		/opt/qt57/include/QtWidgets/qheaderview.h \
+		/opt/qt57/include/QtWidgets/qabstractitemview.h \
+		/opt/qt57/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt57/include/QtCore/qabstractitemmodel.h \
+		/opt/qt57/include/QtCore/qitemselectionmodel.h \
+		/opt/qt57/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt57/include/QtWidgets/qstyleoption.h \
+		/opt/qt57/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt57/include/QtGui/qvalidator.h \
+		/opt/qt57/include/QtCore/qregularexpression.h \
+		/opt/qt57/include/QtWidgets/qslider.h \
+		/opt/qt57/include/QtWidgets/qabstractslider.h \
+		/opt/qt57/include/QtWidgets/qstyle.h \
+		/opt/qt57/include/QtWidgets/qtabbar.h \
+		/opt/qt57/include/QtWidgets/qrubberband.h \
+		/opt/qt57/include/QtWidgets/QLabel \
+		/opt/qt57/include/QtWidgets/qlabel.h \
+		/opt/qt57/include/QtWidgets/QMenuBar \
+		/opt/qt57/include/QtWidgets/qmenubar.h \
+		/opt/qt57/include/QtWidgets/qmenu.h \
+		/opt/qt57/include/QtWidgets/QPushButton \
+		/opt/qt57/include/QtWidgets/qpushbutton.h \
+		/opt/qt57/include/QtWidgets/qabstractbutton.h \
+		/opt/qt57/include/QtWidgets/QStatusBar \
+		/opt/qt57/include/QtWidgets/qstatusbar.h \
+		/opt/qt57/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fourth.o fourth.cpp
 
 qrc_resources.o: qrc_resources.cpp 

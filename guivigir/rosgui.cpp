@@ -19,7 +19,8 @@ ROSGUI::ROSGUI(QWidget *parent) :
     this->resize(desktopWidth,desktopHeight);
     ui->setupUi(this);
 
-    QPixmap pix(":/images/img/Uni.jpg");
+    QPixmap pix(":/images/img/UNI-LOGOa.png");
+
     ui->label_3->setPixmap(pix);
 //    QImage pix2(":/images/img/noun_1036042_cc.png");
 //    ui->mdiArea_2->setBackground(pix2);

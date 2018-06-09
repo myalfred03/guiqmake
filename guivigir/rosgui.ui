@@ -122,7 +122,7 @@
              <bool>true</bool>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -144,10 +144,10 @@
              <widget class="QLabel" name="label_3">
               <property name="geometry">
                <rect>
-                <x>20</x>
-                <y>20</y>
-                <width>521</width>
-                <height>301</height>
+                <x>60</x>
+                <y>30</y>
+                <width>441</width>
+                <height>291</height>
                </rect>
               </property>
               <property name="text">
@@ -2300,7 +2300,7 @@
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="text">
-         <string>LABORATORIO VIRTUAL ROBÓTICA BÁSICA</string>
+         <string>ESCENARIO VIRTUAL ROBÓTICA INDUSTRIAL</string>
         </property>
         <property name="textFormat">
          <enum>Qt::RichText</enum>
@@ -2323,7 +2323,7 @@
      <x>0</x>
      <y>0</y>
      <width>1497</width>
-     <height>18</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFILE">

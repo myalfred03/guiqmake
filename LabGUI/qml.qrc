@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>img/UNI-LOGOa.png</file>
+        <file>qml/Welcome.qml</file>
+        <file>img/UNI-icon.png</file>
+        <file>ReFormation Sans Regular.ttf</file>
+        <file>img/background02.png</file>
+        <file>img/NIC.jpg</file>
+        <file>qml/ScrollablePage.qml</file>
+    </qresource>
+</RCC>
