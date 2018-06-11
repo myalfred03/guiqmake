@@ -1,39 +1,29 @@
-import QtQuick 2.0
-import QtQuick.Window 2.2
+import QtQuick 2.9
+import QtQuick.Window 2.0
 import QtGraphicalEffects.private 1.0
 import QtQuick.Controls.Universal 2.0
 import QtQuick.Controls.Material 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
+import Qt.labs.settings 1.0
+import "dialogs"
 
 
 Item {
     id:welcome
     visible: true
- property bool visi: true
+    property bool visi: true
     FontLoader { id: textFont;    source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: numericFont; source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: fontSystem;  source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: localFont;   source: "qrc:/ReFormation Sans Regular.ttf" }
 
     Image {
-
-//        width: 1400
-//        height: 718
+        id:imagef
         width: Screen.width
         height: Screen.height
         z: -1
-        //        width: 1336
-        //        height: 869
-        //        anchors.horizontalCenterOffset: 68
-        //        anchors.topMargin: 0
         opacity: 1.0
-        //        anchors.top: parent.top
-        //        anchors.horizontalCenter: parent.horizontalCenter
-        //        anchors.margins: 0.001
-//        sourceSize.width: 1400
-//        sourceSize.height: 920
-
         source: "qrc:/img/background02.png"
         smooth: true
         //}//image
@@ -55,20 +45,18 @@ Item {
                 id:welcom
                 anchors.right: logoNIC.left
                 anchors.rightMargin: 0
-               anchors.top: parent.top
-               anchors.topMargin: 0
-               anchors.bottom: parent.bottom
-               anchors.bottomMargin: 0
-               anchors.left: logoUNI.right
-               anchors.leftMargin: 0
-//               width: 613
-//               height: 99
-               color: "#191c28"
-               radius: 25
-               border.width: 3
-               border.color: "#da300e"
-               opacity: 0.3
-            }
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.left: logoUNI.right
+                anchors.leftMargin: 0
+                color: "#191c28"
+                radius: 25
+                border.width: 3
+                border.color: "#da300e"
+                opacity: 0.3
+                     }
             Rectangle{
                 id:rlogoUNI
                 anchors.right:welcom.left
@@ -79,14 +67,12 @@ Item {
                 anchors.bottomMargin: 0
                 anchors.top: parent.top
                 anchors.topMargin: 0
-//               width: 613
-//               height: 99
-               color: "#191c28"
-               radius: 25
-               border.width: 3
-               border.color: "#409fe3"
-               opacity: 0.1
-            }
+                color: "#191c28"
+                radius: 25
+                border.width: 3
+                border.color: "#409fe3"
+                opacity: 0.1
+                      }
             Rectangle{
                 id:rlogoNIC
                 anchors.right: parent.right
@@ -97,440 +83,651 @@ Item {
                 anchors.bottomMargin: 0
                 anchors.top: parent.top
                 anchors.topMargin: 0
-//               width: 613
-//               height: 99
-               color: "#191c28"
-               radius: 25
-               border.width: 3
-               border.color: "#409fe3"
-               opacity: 0.1
-            }
+                color: "#191c28"
+                radius: 25
+                border.width: 3
+                border.color: "#409fe3"
+                opacity: 0.1
+                     }
 
 
-               Text {
-                   id: welcome2
-                   anchors.right: logoNIC.left
-                   anchors.rightMargin: 0
-                  anchors.top: parent.top
-                  anchors.topMargin: 0
-                  anchors.bottom: parent.bottom
-                  anchors.bottomMargin: 0
-                  anchors.left: logoUNI.right
-                  anchors.leftMargin: 0
-                   width: 629
-                   height: 91
-                   color: "#fbfbfb"
-                   text: "Bienvenidos al laboratorio Virtual \n de Robótica Industrial"
-                   opacity: 1
-                   horizontalAlignment: Text.AlignHCenter
-                   font.family: textFont.name
-                   font.pixelSize: 37
-                   font.bold: false
-               }
+            Text {
+                id: welcome2
+                anchors.right: logoNIC.left
+                anchors.rightMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.left: logoUNI.right
+                anchors.leftMargin: 0
+                width: 629
+                height: 91
+                color: "#fbfbfb"
+                text: "Bienvenidos al laboratorio Virtual \n de Robótica Industrial"
+                opacity: 1
+                horizontalAlignment: Text.AlignHCenter
+                font.family: textFont.name
+                font.pixelSize: 37
+                font.bold: false
+                 }
 
 
 
-Item {
-    id: logoUNI
-//    x: 0
-//    y: 14
-    width: 394
-    height: 101
-    anchors.left: parent.left
-    anchors.leftMargin: 9
-    anchors.bottom: parent.bottom
-    anchors.bottomMargin: 0
-    anchors.top: parent.top
-    anchors.topMargin: 3
-    clip: false
-    transformOrigin: Item.Center
+            Item {
+                id: logoUNI
+                width: 394
+                height: 101
+                anchors.left: parent.left
+                anchors.leftMargin: 9
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 3
+                clip: false
+                transformOrigin: Item.Center
 
 
-    Image {
-        id: image2
+                Image {
+                    id: image2
+                    anchors.left: parent.left
+                    anchors.leftMargin: 6
+                    width: 133
+                    height: 88
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/img/UNI-LOGOa.png"
+
+                      }
+
+                Text {
+                    id: txtSystem15
+                    x: 147
+                    y: 8
+                    width: 240
+                    height: 35
+                    color: "#ffffff"
+                    text: qsTr("Universidad Nacional \nde Ingeniería")
+                    font.family: textFont.name
+                    horizontalAlignment: Text.AlignHCenter
+                    z: 2
+                    font.pointSize: 18
+                    font.bold: true
+                     }
+
+                Text {
+                    id: txtSystem2
+                    x: 151
+                    y: 59
+                    width: 236
+                    height: 34
+                    color: "#ffffff"
+                    text: qsTr("Ingeniería Electrónica\nFacultad de electrotecnia y computación")
+                    horizontalAlignment: Text.AlignHCenter
+                    z: 3
+                    font.pointSize: 10
+                    font.family: textFont.name
+                    font.bold: true
+                      }
+                  }
+
+            Item {
+                id: logoNIC
+                anchors.right: parent.right
+                anchors.rightMargin: 15
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                width: 307
+                height: 101
+                transformOrigin: Item.Center
+                z: 1
+
+                Image {
+                    id: image3
+                    x: 125
+                    y: 7
+                    width: 133
+                    height: 79
+                    z: 3
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/img/ni.jpg"
+                }
+
+                Text {
+                    id: txtSystem16
+                    x: 3
+                    y: 27
+                    width: 136
+                    height: 35
+                    color: "#ffffff"
+                    text: qsTr("Nicaragua")
+                    font.family: textFont.name
+                    font.pointSize: 18
+                    z: 2
+                    horizontalAlignment: Text.AlignHCenter
+                    font.bold: true
+                }
+
+                Text {
+                    id: txtSystem3
+                    x: 5
+                    y: 60
+                    width: 134
+                    height: 34
+                    color: "#ffffff"
+                    text: qsTr("Managua")
+                    font.family: textFont.name
+                    font.pointSize: 10
+                    z: 3
+                    horizontalAlignment: Text.AlignHCenter
+                    font.bold: true
+
+                     }
+
+
+                }
+             }   //Rectangle Banner
+
+
+
+        Item{
+            id:item_missontime
+            x: 647
+            y: 548
+            width: 484
+            height: 99
+            z: 1
+
+            Text {
+                id: lblMIssionTime
+                x: 0
+                y: 52
+                width: 225
+                height: 38
+                color: Qt.hsla(0.57,0.0,1,0.8)
+                text: "Tiempo usando \n LAB :"
+                anchors.centerIn: parent
+                font.family: textFont.name
+                font.pixelSize: 30
+                anchors.horizontalCenterOffset: -127
+                font.bold: false
+                anchors.verticalCenterOffset: 18
+                 }
+
+            Text {
+                id: lblhour
+                x: 347
+                y: 71
+                width: 39
+                height: 20
+                color: Qt.hsla(0.57,0.0,1,0.8)
+                text: "HR"
+                verticalAlignment: Text.AlignTop
+                anchors.centerIn: parent
+                font.family: textFont.name
+                font.pixelSize: 20
+                anchors.horizontalCenterOffset: 37
+                font.bold: false
+                anchors.verticalCenterOffset: 23
+                  }
+            // Item Minute
+
+            Text {
+                id: lblmin
+                x: 501
+                y: 70
+
+                width: 37
+                height: 20
+                color: Qt.hsla(0.57,0.0,1,0.8)
+                text: "MIN"
+                anchors.centerIn: parent
+                font.family: textFont.name
+                font.pixelSize: 20
+                anchors.horizontalCenterOffset: 102
+                font.bold: false
+                anchors.verticalCenterOffset: 23
+                }
+
+            Text {
+                id: lblsec
+                x: 652
+                y: 70
+
+                width: 39
+                height: 20
+                color: Qt.hsla(0.57,0.0,1,0.8)
+                text: "SEC"
+                anchors.centerIn: parent
+                font.family: textFont.name
+                font.pixelSize: 20
+                anchors.horizontalCenterOffset: 186
+                font.bold: false
+                anchors.verticalCenterOffset: 23
+                }
+        } // item_mission_time
+
+        Rectangle{
+            id:rowR
+            anchors.right: parent.right
+            anchors.rightMargin: 260
+            anchors.top: banner.bottom
+            anchors.topMargin: 70
+            anchors.bottom: rowM.bottom
+            anchors.bottomMargin: 5
+            anchors.left: parent.left
+            anchors.leftMargin: 180
+           // anchors.centerIn: parent
+
+            Material.foreground: "white"
+            radius: 25
+            border.width: 3
+            border.color: "#da300e"
+            opacity: 0.1
+                  } //Rectangle RowLayout
+
+        Text {
+            anchors.top: rowR.top
+            anchors.topMargin: 5
+            anchors.left: parent.left
+            anchors.right: parent.right
+            width: parent.width
+            wrapMode: Label.Wrap
+            horizontalAlignment: Text.AlignHCenter
+            color: "#ffffff"
+            text: "Funcionalidades del Laboratorio Virtual Robótica Industrial."
+            font.pointSize: 15
+             }// Text RowLayout
+
+
+
+        RowLayout {
+            id:rowM //Row Master
+            spacing: 20
+            anchors.top: banner.bottom
+            anchors.topMargin: 100
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 300
+            anchors.left: parent.left
+            anchors.leftMargin: 200
+            anchors.right: parent.right
+            anchors.rightMargin: 280
+
+            Button {
+                id: biblio
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.preferredWidth: 100
+                Layout.maximumHeight: 150
+                Layout.maximumWidth: 150
+                Layout.preferredHeight: 100
+
+                ColumnLayout {
+                    spacing: 2
+                    anchors.centerIn: parent
+
+                    Image {
+                        source: "qrc:/img/bookPc.png"
+                        sourceSize.width: 75
+                        sourceSize.height: 75
+                        fillMode: Image.PreserveAspectCrop
+                        anchors.horizontalCenter: parent.horizontalCenter
+                          }
+
+                    Text {
+                        color: "#ffffff"
+                        text: "Recursos\nBibliograficos"
+                        width: 75
+                        height: 75
+                        font.pointSize: 12
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                          }
+
+                             }//column
+
+                onClicked: biblioMenu.open()
+
+                Menu {
+                    id: biblioMenu
+                    x: parent.width - width
+                    y: parent.height - height
+                    transformOrigin: Menu.TopLeft
+
+                    MenuItem {
+                        text: "Manual de uso del LAB"
+                        onTriggered: dialogRGoU.open()
+                             }
+                    MenuItem {
+                        text: "Libros de Robótica"
+                        onTriggered: dialogRBook.open()
+                             }
+                    MenuItem {
+                        text: "Teoria de Robots"
+                        onTriggered: dialogRToR.open()
+
+                             }
+                     }
+
+                   } //Button biblio
+
+            ToolButton {
+                ToolTip.timeout: 3000
+                ToolTip.delay : 150
+                ToolTip.visible: hovered
+                ToolTip.text: "Si Lees la documentación\nTe sera mas Facil\nModelar tu Robot :)."
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 80
+
+                Image {
+                    source: "qrc:/img/step1.png"
+                    sourceSize.width: 50
+                    sourceSize.height: 50
+                    fillMode: Image.PreserveAspectCrop
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                      }
+                        }
+
+            Button {
+                id:model
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.preferredWidth: 100
+                Layout.maximumHeight: 150
+                Layout.maximumWidth: 150
+                Layout.preferredHeight: 100
+
+                ColumnLayout {
+                    spacing: 2
+                    anchors.centerIn: parent
+
+                    Image {
+                        source: "qrc:/img/modelURDF.png"
+                        sourceSize.width: 75
+                        sourceSize.height: 75
+                        fillMode: Image.PreserveAspectCrop
+                        anchors.horizontalCenter: parent.horizontalCenter
+
+                          }
+
+                    Text {
+                        color: "#ffffff"
+                        text: "Modelacion \nde Robots"
+                        width: 75
+                        height: 75
+                        font.pointSize: 11
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                         }
+
+                             }//column
+
+                onClicked: modelMenu.open()
+
+                Menu {
+                    id: modelMenu
+                    x: parent.width - width
+                    y: parent.height - height
+                    transformOrigin: Menu.TopLeft
+
+                    MenuItem {
+                        text: "Teoria de Modelación"
+                        onTriggered: dialogMToR.open()
+                             }
+                    MenuItem {
+                        text: "Languaje URDF"
+                        onTriggered: dialogMLU.open()
+                             }
+                    MenuItem {
+                        text: "Modela tu Robot"
+                        onTriggered: dialogMRb.open()
+                             }
+                     }
+
+                    } //Button model
+
+            ToolButton {
+                ToolTip.timeout: 3000
+                ToolTip.delay : 150
+                ToolTip.visible: hovered
+                ToolTip.text: "Al modelar tu propio Robot\naprenderas a calcular\ny verificar sus movimientos :)."
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 80
+
+                Image {
+                    source: "qrc:/img/step2.png"
+                    sourceSize.width: 50
+                    sourceSize.height: 50
+                    fillMode: Image.PreserveAspectCrop
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                      }
+                        }
+
+            Button {
+                id:kinema
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.preferredWidth: 100
+                Layout.maximumHeight: 150
+                Layout.maximumWidth: 150
+                Layout.preferredHeight: 100
+
+                ColumnLayout {
+                    spacing: 2
+                    anchors.centerIn: parent
+                    Image {
+                        source: "qrc:/img/Kinema.png"
+                        sourceSize.width: 75
+                        sourceSize.height: 75
+                        fillMode: Image.PreserveAspectCrop
+                        anchors.horizontalCenter: parent.horizontalCenter
+                          }
+
+                    Text {
+                        color: "#ffffff"
+                        text: "Cinematica\n de Robots"
+                        width: 75
+                        height: 75
+                        font.pointSize: 12
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                         }
+
+                              }//column
+
+                onClicked: kinemaMenu.open()
+
+                Menu {
+                    id: kinemaMenu
+                    x: parent.width - width
+                    y: parent.height - height
+                    transformOrigin: Menu.TopLeft
+
+                    MenuItem {
+                        text: "Teoria de Cinemática"
+                        onTriggered: dialogKToR.open()
+                             }
+                    MenuItem {
+                        text: "URDF y Cinematica"
+                        onTriggered: dialogKLU.open()
+                             }
+                    MenuItem {
+                        text: "Calcula la Cinematica"
+                        onTriggered: dialogKRcal.open()
+                             }
+                     }
+
+                   } //Button
+
+            ToolButton {
+                ToolTip.timeout: 2500
+                ToolTip.delay : 150
+                ToolTip.visible: hovered
+                ToolTip.text: "Ahora que sabes de Cinematica\nTe sera facil programar\nuna rutina para un Robot :)."
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 80
+
+                Image {
+                    source: "qrc:/img/step3.png"
+                    sourceSize.width: 50
+                    sourceSize.height: 50
+                    fillMode: Image.PreserveAspectCrop
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                      }
+                        }
+
+            Button {
+                id:simul
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.preferredWidth: 100
+                Layout.maximumHeight: 150
+                Layout.maximumWidth: 150
+                Layout.preferredHeight: 100
+
+                ColumnLayout {
+                    spacing: 2
+                    anchors.centerIn: parent
+                    Image {
+                        source: "qrc:/img/Simu100x.png"
+                        sourceSize.width: 75
+                        sourceSize.height: 75
+                        fillMode: Image.PreserveAspectCrop
+                        anchors.horizontalCenter: parent.horizontalCenter
+
+                          }
+
+                    Text {
+                        color: "#ffffff"
+                        text: "Simulación\nde Robots "
+                        width: 75
+                        height: 75
+                        font.pointSize: 12
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                         }
+
+                               }//columnsimulation
+
+                onClicked: simulMenu.open()
+
+                Menu {
+                    id: simulMenu
+                    x: parent.width - width
+                    y: parent.height - height
+                    transformOrigin: Menu.TopLeft
+
+                    MenuItem {
+                        text: "Teoria en la Simulación"
+                        onTriggered: dialogSToR.open()
+                             }
+                    MenuItem {
+                        text: "SDF y Simulación"
+                        onTriggered: dialogSsdf.open()
+                             }
+                    MenuItem {
+                        text: "Aprende con tu Robot Virtual"
+                        onTriggered: dialogSRo.open()
+                             }
+                     }
+
+                    } //Buttonsimulation
+
+            }//RowLayout
+
+        Button {
         anchors.left: parent.left
-        anchors.leftMargin: 6
-        width: 133
-        height: 88
-        fillMode: Image.PreserveAspectFit
-        source: "qrc:/img/UNI-LOGOa.png"
+        anchors.leftMargin: 10
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 30
+        width: 100
+        height: 100
 
-    }
+        ColumnLayout {
+            id: aboutC
+            spacing: 2
+            anchors.centerIn: parent
 
-    Text {
-        id: txtSystem15
-        x: 147
-        y: 8
-        width: 240
-        height: 35
-        color: "#ffffff"
-        text: qsTr("Universidad Nacional \nde Ingeniería")
-        font.family: textFont.name
-        horizontalAlignment: Text.AlignHCenter
-        z: 2
-        font.pointSize: 18
-        font.bold: true
-    }
+            Image {
+                source: "qrc:/img/about.png"
+                sourceSize.width: 65
+                sourceSize.height: 65
+                fillMode: Image.PreserveAspectCrop
+                anchors.horizontalCenter: parent.horizontalCenter
+                  }
 
-    Text {
-        id: txtSystem2
-        x: 151
-        y: 59
-        width: 236
-        height: 34
-        color: "#ffffff"
-        text: qsTr("Ingeniería Electrónica\nFacultad de electrotecnia y computación")
-        horizontalAlignment: Text.AlignHCenter
-        z: 3
-        font.pointSize: 10
-        font.family: textFont.name
-        font.bold: true
-    }
-}
-
-Item {
-    id: logoNIC
-//    x: 1035
-//    y: 8
-    anchors.right: parent.right
-    anchors.rightMargin: 15
-    anchors.bottom: parent.bottom
-    anchors.bottomMargin: 0
-    anchors.top: parent.top
-    anchors.topMargin: 0
-    width: 307
-    height: 101
-    transformOrigin: Item.Center
-    z: 1
-    Image {
-        id: image3
-        x: 145
-        y: 5
-        width: 133
-        height: 88
-        z: 3
-        fillMode: Image.PreserveAspectFit
-        source: "qrc:/img/NIC.jpg"
-    }
-
-    Text {
-        id: txtSystem16
-        x: 3
-        y: 27
-        width: 136
-        height: 35
-        color: "#ffffff"
-        text: qsTr("Nicaragua")
-        font.family: textFont.name
-        font.pointSize: 18
-        z: 2
-        horizontalAlignment: Text.AlignHCenter
-        font.bold: true
-    }
-
-    Text {
-        id: txtSystem3
-        x: 5
-        y: 60
-        width: 134
-        height: 34
-        color: "#ffffff"
-        text: qsTr("Managua")
-        font.family: textFont.name
-        font.pointSize: 10
-        z: 3
-        horizontalAlignment: Text.AlignHCenter
-        font.bold: true
-    }
-
-
-    }
-} //Rectangle
-
-
-
-Item{
-           id:item_missontime
-           x: 647
-           y: 548
-           width: 484
-           height: 99
-           z: 1
-
-           Text {
-               id: lblMIssionTime
-               x: 0
-               y: 52
-               width: 225
-               height: 38
-               color: Qt.hsla(0.57,0.0,1,0.8)
-               text: "Tiempo usando \n LAB :"
-               anchors.centerIn: parent
-               font.family: textFont.name
-               font.pixelSize: 30
-               anchors.horizontalCenterOffset: -127
-               font.bold: false
-               anchors.verticalCenterOffset: 18
-           }
-
-
-          // Item Hour
-
-              Text {
-              id: lblhour
-              x: 347
-              y: 71
-
-              width: 39
-              height: 20
-              color: Qt.hsla(0.57,0.0,1,0.8)
-              text: "HR"
-              verticalAlignment: Text.AlignTop
-              anchors.centerIn: parent
-              font.family: textFont.name
-              font.pixelSize: 20
-              anchors.horizontalCenterOffset: 37
-              font.bold: false
-              anchors.verticalCenterOffset: 23
-              }
-              // Item Minute
-
-              Text {
-              id: lblmin
-              x: 501
-              y: 70
-
-              width: 37
-              height: 20
-              color: Qt.hsla(0.57,0.0,1,0.8)
-              text: "MIN"
-              anchors.centerIn: parent
-              font.family: textFont.name
-              font.pixelSize: 20
-              anchors.horizontalCenterOffset: 102
-              font.bold: false
-              anchors.verticalCenterOffset: 23
-              }
-
-          Text {
-              id: lblsec
-              x: 652
-              y: 70
-
-              width: 39
-              height: 20
-              color: Qt.hsla(0.57,0.0,1,0.8)
-              text: "SEC"
-              anchors.centerIn: parent
-              font.family: textFont.name
-              font.pixelSize: 20
-              anchors.horizontalCenterOffset: 186
-              font.bold: false
-              anchors.verticalCenterOffset: 23
-          }
-} // item_mission_time
-
-
-Rectangle{
-    id:columnR
-    anchors.right: columnM.right
-    anchors.rightMargin: 5
-    anchors.top: banner.bottom
-    anchors.topMargin: 30
-    anchors.bottom: columnM.bottom
-    anchors.bottomMargin: 5
-    anchors.left: columnM.left
-    anchors.leftMargin: 5
-//               width: 613
-//               height: 99
-   color: "#191c28"
-   radius: 25
-   z: 3
-   border.width: 3
-   border.color: "#da300e"
-   opacity: 0.3
-
-}
-    Column {
-       id:columnM //Column Master
-        property int buttonWidth: 200
-        spacing: 20
-        anchors.top: banner.bottom
-        anchors.topMargin: 30
-
-        anchors.centerIn: parent
-//        x: 559
-//        y: 134
-        width: 381
-        height: 314
-
-
-
-            Label {
-                width: parent.width
+            Text {
+                text: "ABOUT"
+                font.pointSize: 10
+                font.bold: true
+                color: "#FFFFFF"
+                anchors.horizontalCenter: parent.horizontalCenter
                 wrapMode: Label.Wrap
-                horizontalAlignment: Qt.AlignHCenter
-                color: "#ffffff"
-                text: "Funcionalidades del Laboratorio Virtual de  "
-                    + "Robótica Industrial."
-                font.pointSize: 15
-            }
+                  }
+             }
+        onClicked: dialogLV.open()
 
-            Button {
-                text: "Message"
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: 200
-                onClicked: messageDialog.open()
-
-                Dialog {
-                    id: messageDialog
-
-                    x: (parent.width - width) / 2
-                    y: (parent.height - height) / 2
-
-                    title: "Message"
-
-                    Label {
-                        text: "Lorem ipsum dolor sit amet..."
-                    }
-                }
-            }
-
-            Button {
-                id: button
-                text: "Confirmation"
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: 200
-                onClicked: confirmationDialog.open()
-
-                Dialog {
-                    id: confirmationDialog
-
-                    x: (parent.width - width) / 2
-                    y: (parent.height - height) / 2
-                    parent: ApplicationWindow.overlay
-
-                    modal: true
-                    title: "Confirmation"
-                    standardButtons: Dialog.Yes | Dialog.No
-
-                    Column {
-                        spacing: 20
-                        anchors.fill: parent
-                        Label {
-                            text: "The document has been modified.\nDo you want to save your changes?"
-                        }
-                        CheckBox {
-                            text: "Do not ask again"
-                            anchors.right: parent.right
-                        }
-                    }
-                }
-            }
-
-            Button {
-                text: "Content"
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: 200
-                onClicked: contentDialog.open()
-
-                Dialog {
-                    id: contentDialog
-
-                    x: (parent.width - width) / 2
-                    y: (parent.height - height) / 2
-                    width: 500
-                    height: 500
-                    contentHeight: logo.height * 2
-                    parent: ApplicationWindow.overlay
-
-                    modal: true
-                    title: "Content"
-                    standardButtons: Dialog.Close
-
-                    Flickable {
-                        id: flickable
-                        clip: true
-                        anchors.fill: parent
-                        contentHeight: column.height
-
-                        Column {
-                            id: column
-                            spacing: 20
-                            width: parent.width
-
-                            Image {
-                                id: logo
-                                width: parent.width / 2
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                fillMode: Image.PreserveAspectFit
-                                source: "qrc:/img/UNI-LOGOa.png"
-                            }
-
-                            Label {
-                                width: parent.width
-                                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                                    + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                                    + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                                    + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                                    + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                                    + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                                    + "eu aliquam enim suscipit."
-                                wrapMode: Label.Wrap
-                            }
-                        }
-
-                        ScrollIndicator.vertical: ScrollIndicator {
-                            parent: contentDialog.contentItem
-                            anchors.top: flickable.top
-                            anchors.bottom: flickable.bottom
-                            anchors.right: parent.right
-                            anchors.rightMargin: -contentDialog.rightPadding + 1
-                        }
-                    }
-                }
-            }
-
-            Button {
-                text: "Input"
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: 200
-                onClicked: inputDialog.open()
-
-                Dialog {
-                    id: inputDialog
-
-                    x: (parent.width - width) / 2
-                    y: (parent.height - height) / 2
-                    parent: ApplicationWindow.overlay
-
-                    focus: true
-                    modal: true
-                    title: "Input"
-                    standardButtons: Dialog.Ok | Dialog.Cancel
-
-                    ColumnLayout {
-                        spacing: 20
-                        anchors.fill: parent
-                        Label {
-                            elide: Label.ElideRight
-                            text: "Please enter the credentials:"
-                            Layout.fillWidth: true
-                        }
-                        TextField {
-                            focus: true
-                            placeholderText: "Username"
-                            Layout.fillWidth: true
-                        }
-                        TextField {
-                            placeholderText: "Password"
-                            echoMode: TextField.PasswordEchoOnEdit
-                            Layout.fillWidth: true
-                        }
-                    }
-                }
-            }
-}//colum
+             }//Button About
 
 }//image
-}
+
+// Dialogos con los textos
+
+    DialogRBook{
+        id:dialogRBook
+               }
+    DialogWel{
+        id:dialogRB1
+             }
+    DialogGuide{
+        id:dialogguide
+               }
+    DialogLV{
+        id:dialogLV
+            }
+    DialogRToR{
+        id:dialogRToR
+              }
+    DialogRGoU{
+        id:dialogRGoU
+              }
+    DialogKLU{
+        id:dialogKLU
+             }
+    DialogKRcal{
+        id:dialogKRcal
+               }
+    DialogKToR{
+        id:dialogKToR
+              }
+
+    DialogMLU {
+        id: dialogMLU
+           }
+    DialogMRb {
+        id: dialogMRb
+           }
+    DialogMToR {
+        id: dialogMToR
+           }
+    DialogSRo {
+        id: dialogSRo
+              }
+
+    DialogSsdf {
+        id: dialogSsdf
+               }
+    DialogSToR {
+        id: dialogSToR
+               }
+} //Item Window welcome

@@ -69,3 +69,4 @@ Page {
         ScrollIndicator.vertical: ScrollIndicator { }
     }
 }
+

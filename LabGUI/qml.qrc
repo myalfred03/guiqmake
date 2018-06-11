@@ -8,5 +8,45 @@
         <file>img/background02.png</file>
         <file>img/NIC.jpg</file>
         <file>qml/ScrollablePage.qml</file>
+        <file>img/bookPc.png</file>
+        <file>img/bookPc55x.png</file>
+        <file>img/bookPc100x.png</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>qml/dialogs/DialogRBook.qml</file>
+        <file>qml/dialogs/DialogWel.qml</file>
+        <file>qml/dialogs/DialogGuide.qml</file>
+        <file>img/Cinemat.png</file>
+        <file>img/model.png</file>
+        <file>img/model100x.png</file>
+        <file>img/Simu100x.png</file>
+        <file>img/Kinem.png</file>
+        <file>img/ni.jpg</file>
+        <file>img/Kinema.png</file>
+        <file>img/modelURDF.png</file>
+        <file>qml/dialogs/DialogLV.qml</file>
+        <file>img/developer/YE.jpg</file>
+        <file>img/about.png</file>
+        <file>img/step1.png</file>
+        <file>img/step2.png</file>
+        <file>img/step3.png</file>
+        <file>img/dialogsWel/Barrientos.png</file>
+        <file>img/dialogsWel/Craig.png</file>
+        <file>img/dialogsWel/NewmanROS.png</file>
+        <file>qml/dialogs/DialogRToR.qml</file>
+        <file>qml/dialogs/DialogRGoU.qml</file>
+        <file>img/dialogsWel/books.png</file>
+        <file>img/dialogsWel/guide.png</file>
+        <file>img/dialogsWel/ToR.png</file>
+        <file>qml/dialogs/DialogKLU.qml</file>
+        <file>qml/dialogs/DialogKRcal.qml</file>
+        <file>qml/dialogs/DialogKToR.qml</file>
+        <file>qml/dialogs/DialogMLU.qml</file>
+        <file>qml/dialogs/DialogMRb.qml</file>
+        <file>qml/dialogs/DialogMToR.qml</file>
+        <file>qml/dialogs/DialogSRo.qml</file>
+        <file>qml/dialogs/DialogSsdf.qml</file>
+        <file>qml/dialogs/DialogSToR.qml</file>
+        <file>img/dialogsWel/simul.png</file>
+        <file>img/dialogsWel/simulgz.png</file>
     </qresource>
 </RCC>

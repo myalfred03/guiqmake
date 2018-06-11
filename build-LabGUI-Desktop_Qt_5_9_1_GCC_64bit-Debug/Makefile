@@ -660,13 +660,53 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc \
+		../LabGUI/qtquickcontrols2.conf \
 		../LabGUI/main.qml \
 		../LabGUI/qml/Welcome.qml \
 		../LabGUI/qml/ScrollablePage.qml \
+		../LabGUI/qml/dialogs/DialogKRcal.qml \
+		../LabGUI/qml/dialogs/DialogMLU.qml \
+		../LabGUI/qml/dialogs/DialogSsdf.qml \
+		../LabGUI/qml/dialogs/DialogGuide.qml \
+		../LabGUI/qml/dialogs/DialogMRb.qml \
+		../LabGUI/qml/dialogs/DialogKLU.qml \
+		../LabGUI/qml/dialogs/DialogSRo.qml \
+		../LabGUI/qml/dialogs/DialogLV.qml \
+		../LabGUI/qml/dialogs/DialogRToR.qml \
+		../LabGUI/qml/dialogs/DialogRGoU.qml \
+		../LabGUI/qml/dialogs/DialogSToR.qml \
+		../LabGUI/qml/dialogs/DialogMToR.qml \
+		../LabGUI/qml/dialogs/DialogKToR.qml \
+		../LabGUI/qml/dialogs/DialogRBook.qml \
+		../LabGUI/qml/dialogs/DialogWel.qml \
 		../LabGUI/img/NIC.jpg \
+		../LabGUI/img/Kinema.png \
+		../LabGUI/img/Simu100x.png \
+		../LabGUI/img/UNI-LOGOa.png \
+		../LabGUI/img/modelURDF.png \
+		../LabGUI/img/ni.jpg \
+		../LabGUI/img/Cinemat.png \
+		../LabGUI/img/model.png \
+		../LabGUI/img/step1.png \
+		../LabGUI/img/bookPc.png \
+		../LabGUI/img/bookPc100x.png \
+		../LabGUI/img/step2.png \
+		../LabGUI/img/model100x.png \
+		../LabGUI/img/about.png \
+		../LabGUI/img/step3.png \
+		../LabGUI/img/Kinem.png \
+		../LabGUI/img/bookPc55x.png \
 		../LabGUI/img/background02.png \
 		../LabGUI/img/UNI-icon.png \
-		../LabGUI/img/UNI-LOGOa.png
+		../LabGUI/img/dialogsWel/Barrientos.png \
+		../LabGUI/img/dialogsWel/ToR.png \
+		../LabGUI/img/dialogsWel/guide.png \
+		../LabGUI/img/dialogsWel/simulgz.png \
+		../LabGUI/img/dialogsWel/simul.png \
+		../LabGUI/img/dialogsWel/NewmanROS.png \
+		../LabGUI/img/dialogsWel/books.png \
+		../LabGUI/img/dialogsWel/Craig.png \
+		../LabGUI/img/developer/YE.jpg
 	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name qml ../LabGUI/qml.qrc -o qrc_qml.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -795,7 +835,14 @@ main.o: ../LabGUI/main.cpp ../../../Qt5.9.1/5.9.1/gcc_64/include/QtGui/QGuiAppli
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtGui/qregion.h \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/qdatastream.h \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/qline.h \
-		../../../Qt5.9.1/5.9.1/gcc_64/include/QtGui/qpainterpath.h
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtGui/qpainterpath.h \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtQml/QQmlContext \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtQml/qqmlcontext.h \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/QSettings \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/qsettings.h \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtQuickControls2/QQuickStyle \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtQuickControls2/qquickstyle.h \
+		../../../Qt5.9.1/5.9.1/gcc_64/include/QtQuickControls2/qtquickcontrols2global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../LabGUI/main.cpp
 
 qrc_qml.o: qrc_qml.cpp 
