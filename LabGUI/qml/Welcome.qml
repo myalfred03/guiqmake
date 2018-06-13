@@ -1,5 +1,5 @@
 import QtQuick 2.9
-import QtQuick.Window 2.0
+import QtQuick.Window 2.0 //Screen.widht
 import QtGraphicalEffects.private 1.0
 import QtQuick.Controls.Universal 2.0
 import QtQuick.Controls.Material 2.0
@@ -11,15 +11,18 @@ import "dialogs"
 
 Item {
     id:welcome
-    visible: true
-    property bool visi: true
+    property bool vis: true
+    property real time_hour : 0
+    property real time_min : 0
+    property real time_sec : 0
     FontLoader { id: textFont;    source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: numericFont; source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: fontSystem;  source: "qrc:/ReFormation Sans Regular.ttf" }
     FontLoader { id: localFont;   source: "qrc:/ReFormation Sans Regular.ttf" }
 
-    Image {
+    Image {      
         id:imagef
+        visible: vis
         width: Screen.width
         height: Screen.height
         z: -1
@@ -182,6 +185,15 @@ Item {
                 height: 101
                 transformOrigin: Item.Center
                 z: 1
+                Text {
+                    id: hmsText
+                    x: 24
+                    color: "#ffffff"
+                    text: qsTr("00:00:00")
+                    horizontalAlignment: Text.AlignRight
+                    styleColor: "#00000000"
+                    font.pixelSize: 22
+                }
 
                 Image {
                     id: image3
@@ -231,80 +243,133 @@ Item {
 
 
 
-        Item{
-            id:item_missontime
-            x: 647
-            y: 548
-            width: 484
-            height: 99
-            z: 1
+        Timer {
+            interval: 1000; running: true; repeat: true
+            //onTriggered: time.text = Qt.formatDateTime(new Date(), "dddd\nyyyy-MM-dd\n-MMM-\nhh-mm-ss")
+            onTriggered:
+            {
+                time_sec++;
+                if(time_sec > 59)
+                {
+                    time_sec = 0
+                    time_min++
+                    if (time_min>59)
+                    {
+                        time_min=0
+                        time_hour++
+                    }
+                }
+
+                hmsText.text=new Date().toLocaleString(Qt.locale(),"hh:mm:ss")
+               // ddayText.text=new Date().toLocaleString(Qt.locale(),"dddd")
+            }
+            }
+        RowLayout{
+            id:missontime
+            width: 841
+            transformOrigin: Item.Center
+            spacing: 1
+            anchors.right: parent.right
+            anchors.rightMargin: 350
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 70
+            anchors.left: parent.left
+            anchors.leftMargin: 280
+
+
+
+
 
             Text {
                 id: lblMIssionTime
-                x: 0
-                y: 52
-                width: 225
-                height: 38
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 80
                 color: Qt.hsla(0.57,0.0,1,0.8)
-                text: "Tiempo usando \n LAB :"
-                anchors.centerIn: parent
+                text: "Tiempo usando LAB :"
                 font.family: textFont.name
                 font.pixelSize: 30
-                anchors.horizontalCenterOffset: -127
                 font.bold: false
-                anchors.verticalCenterOffset: 18
                  }
+            Text {
+                id: hr
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 10
+                color: "#66bfd5e9"
+                text: time_hour.toLocaleString(Qt.locale("00"),"A",0)
+                font.family: textFont.name
+                font.pixelSize: 30
+                font.bold: false
+                }
 
             Text {
                 id: lblhour
-                x: 347
-                y: 71
-                width: 39
-                height: 20
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 20
                 color: Qt.hsla(0.57,0.0,1,0.8)
                 text: "HR"
-                verticalAlignment: Text.AlignTop
-                anchors.centerIn: parent
                 font.family: textFont.name
                 font.pixelSize: 20
-                anchors.horizontalCenterOffset: 37
                 font.bold: false
-                anchors.verticalCenterOffset: 23
                   }
             // Item Minute
 
             Text {
-                id: lblmin
-                x: 501
-                y: 70
+                id: min
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 10
+                color: "#66bfd5e9"
+                text: time_min.toLocaleString(Qt.locale("00"),"A",0)
+                font.family: textFont.name
+                font.pixelSize: 30
+                font.bold: false
+                }
 
-                width: 37
-                height: 20
+            Text {
+                id: lblmin
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 20
                 color: Qt.hsla(0.57,0.0,1,0.8)
                 text: "MIN"
-                anchors.centerIn: parent
                 font.family: textFont.name
                 font.pixelSize: 20
-                anchors.horizontalCenterOffset: 102
                 font.bold: false
-                anchors.verticalCenterOffset: 23
+                }
+
+
+            Text {
+                id: sec
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 10
+                color: "#66bfd5e9"
+                text: time_sec.toLocaleString(Qt.locale("00"),"A",0)
+                font.family: textFont.name
+                font.pixelSize: 30
+                font.bold: false
                 }
 
             Text {
                 id: lblsec
-                x: 652
-                y: 70
-
-                width: 39
-                height: 20
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.maximumHeight: 80
+                Layout.maximumWidth: 20
                 color: Qt.hsla(0.57,0.0,1,0.8)
                 text: "SEC"
-                anchors.centerIn: parent
                 font.family: textFont.name
                 font.pixelSize: 20
-                anchors.horizontalCenterOffset: 186
                 font.bold: false
-                anchors.verticalCenterOffset: 23
                 }
         } // item_mission_time
 
@@ -336,7 +401,7 @@ Item {
             wrapMode: Label.Wrap
             horizontalAlignment: Text.AlignHCenter
             color: "#ffffff"
-            text: "Funcionalidades del Laboratorio Virtual Robótica Industrial."
+            text: "Funcionalidades del Laboratorio Virtual de Robótica Industrial."
             font.pointSize: 15
              }// Text RowLayout
 
@@ -678,6 +743,49 @@ Item {
         onClicked: dialogLV.open()
 
              }//Button About
+
+        Button {
+        anchors.right: parent.right
+        anchors.rightMargin: 60
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 30
+        width: 100
+        height: 100
+        ToolTip.timeout: 3000
+        ToolTip.delay : 150
+        ToolTip.visible: hovered
+        ToolTip.text: "Ir a Menu Principal."
+
+        ColumnLayout {
+            id: goLabC
+            spacing: 2
+            anchors.centerIn: parent
+
+            Image {
+                source: "qrc:/img/Mainlab.png"
+                sourceSize.width: 40
+                sourceSize.height: 40
+                fillMode: Image.PreserveAspectCrop
+                anchors.horizontalCenter: parent.horizontalCenter
+                  }
+
+            Text {
+                text: "Main LAB"
+                font.pointSize: 10
+                font.bold: true
+                color: "#FFFFFF"
+                anchors.horizontalCenter: parent.horizontalCenter
+                wrapMode: Label.Wrap
+                  }
+             }
+        onClicked: {
+            vis = false
+            //mainsc.vis= false
+            mainLab.vis = true
+
+        }
+
+             }//Button Main
 
 }//image
 

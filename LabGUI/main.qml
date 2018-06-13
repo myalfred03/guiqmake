@@ -7,9 +7,12 @@ import "qml"
 
 
 Window {
+    id:mainsc
+//    property bool vis: true
     visible: true
     width: Screen.width
     height: Screen.height
+    title: qsTr("Virtual Laboratory")
 
 //    MouseArea {
 //        anchors.fill: parent
@@ -77,6 +80,10 @@ Window {
     Welcome {
         id:welcome
     }
+    MainLab{
+        id:mainLab
+    }
+
 //    DialogWel{
 //        id:dialogwel
 //    }

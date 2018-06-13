@@ -48,5 +48,40 @@
         <file>qml/dialogs/DialogSToR.qml</file>
         <file>img/dialogsWel/simul.png</file>
         <file>img/dialogsWel/simulgz.png</file>
+        <file>img/arrow.png</file>
+        <file>qml/MainLab.qml</file>
+        <file>img/background1green.png</file>
+        <file>img/backgroundblue.png</file>
+        <file>img/Mainlab.png</file>
+        <file>img/welcome.png</file>
+        <file>img/mainLab/drawer.png</file>
+        <file>img/mainLab/menu.png</file>
+        <file>qml/Main/Menu.qml</file>
+        <file>qml/Main/MRbiblio.qml</file>
+        <file>qml/Main/MRkine.qml</file>
+        <file>qml/Main/MRmodel.qml</file>
+        <file>qml/Main/MRsimu.qml</file>
+        <file>qml/Main/FirstSCmenu.qml</file>
+        <file>qml/Main/StackViewCommonTransition.qml</file>
+        <file>qml/Main/Biblio/ScreenbiblioArticleR.qml</file>
+        <file>qml/Main/Biblio/ScreenbiblioBookR.qml</file>
+        <file>qml/Main/Biblio/ScreenbiblioBookROS.qml</file>
+        <file>qml/Main/Biblio/ScreenbiblioGuideLAB.qml</file>
+        <file>qml/Main/Biblio/ScreenbiblioTheoryR.qml</file>
+        <file>qml/Main/Kinem/ScreenKinemCalcExample.qml</file>
+        <file>qml/Main/Kinem/ScreenKinemCinematica.qml</file>
+        <file>qml/Main/Kinem/ScreenKinemInfo.qml</file>
+        <file>qml/Main/Kinem/ScreenKinemTheoryR.qml</file>
+        <file>qml/Main/Kinem/ScreenKinemURDF.qml</file>
+        <file>qml/Main/Model/ScreenModelExample.qml</file>
+        <file>qml/Main/Model/ScreenModelInfo.qml</file>
+        <file>qml/Main/Model/ScreenModelModelando.qml</file>
+        <file>qml/Main/Model/ScreenModelTheoryR.qml</file>
+        <file>qml/Main/Model/ScreenModelURDF.qml</file>
+        <file>qml/Main/Simu/ScreenSimuInfo.qml</file>
+        <file>qml/Main/Simu/ScreenSimuScriptExample.qml</file>
+        <file>qml/Main/Simu/ScreenSimuSDF.qml</file>
+        <file>qml/Main/Simu/ScreenSimuSimulando.qml</file>
+        <file>qml/Main/Simu/ScreenSimuTheoryR.qml</file>
     </qresource>
 </RCC>

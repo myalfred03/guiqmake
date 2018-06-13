@@ -663,6 +663,7 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/qtquickcontrols2.conf \
 		../LabGUI/main.qml \
 		../LabGUI/qml/Welcome.qml \
+		../LabGUI/qml/MainLab.qml \
 		../LabGUI/qml/ScrollablePage.qml \
 		../LabGUI/qml/dialogs/DialogKRcal.qml \
 		../LabGUI/qml/dialogs/DialogMLU.qml \
@@ -679,13 +680,43 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/qml/dialogs/DialogKToR.qml \
 		../LabGUI/qml/dialogs/DialogRBook.qml \
 		../LabGUI/qml/dialogs/DialogWel.qml \
+		../LabGUI/qml/Main/Menu.qml \
+		../LabGUI/qml/Main/MRbiblio.qml \
+		../LabGUI/qml/Main/MRmodel.qml \
+		../LabGUI/qml/Main/StackViewCommonTransition.qml \
+		../LabGUI/qml/Main/FirstSCmenu.qml \
+		../LabGUI/qml/Main/MRkine.qml \
+		../LabGUI/qml/Main/MRsimu.qml \
+		../LabGUI/qml/Main/Simu/ScreenSimuScriptExample.qml \
+		../LabGUI/qml/Main/Simu/ScreenSimuSimulando.qml \
+		../LabGUI/qml/Main/Simu/ScreenSimuInfo.qml \
+		../LabGUI/qml/Main/Simu/ScreenSimuTheoryR.qml \
+		../LabGUI/qml/Main/Simu/ScreenSimuSDF.qml \
+		../LabGUI/qml/Main/Kinem/ScreenKinemCinematica.qml \
+		../LabGUI/qml/Main/Kinem/ScreenKinemTheoryR.qml \
+		../LabGUI/qml/Main/Kinem/ScreenKinemCalcExample.qml \
+		../LabGUI/qml/Main/Kinem/ScreenKinemInfo.qml \
+		../LabGUI/qml/Main/Kinem/ScreenKinemURDF.qml \
+		../LabGUI/qml/Main/Biblio/ScreenbiblioGuideLAB.qml \
+		../LabGUI/qml/Main/Biblio/ScreenbiblioArticleR.qml \
+		../LabGUI/qml/Main/Biblio/ScreenbiblioBookR.qml \
+		../LabGUI/qml/Main/Biblio/ScreenbiblioTheoryR.qml \
+		../LabGUI/qml/Main/Biblio/ScreenbiblioBookROS.qml \
+		../LabGUI/qml/Main/Model/ScreenModelModelando.qml \
+		../LabGUI/qml/Main/Model/ScreenModelInfo.qml \
+		../LabGUI/qml/Main/Model/ScreenModelURDF.qml \
+		../LabGUI/qml/Main/Model/ScreenModelExample.qml \
+		../LabGUI/qml/Main/Model/ScreenModelTheoryR.qml \
 		../LabGUI/img/NIC.jpg \
 		../LabGUI/img/Kinema.png \
+		../LabGUI/img/backgroundblue.png \
 		../LabGUI/img/Simu100x.png \
 		../LabGUI/img/UNI-LOGOa.png \
 		../LabGUI/img/modelURDF.png \
 		../LabGUI/img/ni.jpg \
+		../LabGUI/img/Mainlab.png \
 		../LabGUI/img/Cinemat.png \
+		../LabGUI/img/welcome.png \
 		../LabGUI/img/model.png \
 		../LabGUI/img/step1.png \
 		../LabGUI/img/bookPc.png \
@@ -696,8 +727,12 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/img/step3.png \
 		../LabGUI/img/Kinem.png \
 		../LabGUI/img/bookPc55x.png \
+		../LabGUI/img/arrow.png \
+		../LabGUI/img/background1green.png \
 		../LabGUI/img/background02.png \
 		../LabGUI/img/UNI-icon.png \
+		../LabGUI/img/mainLab/menu.png \
+		../LabGUI/img/mainLab/drawer.png \
 		../LabGUI/img/dialogsWel/Barrientos.png \
 		../LabGUI/img/dialogsWel/ToR.png \
 		../LabGUI/img/dialogsWel/guide.png \
