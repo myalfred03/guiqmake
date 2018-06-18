@@ -10,7 +10,7 @@ Window {
     id:mainsc
 //    property bool vis: true
     visible: true
-    width: Screen.width
+    width: Screen.width-45
     height: Screen.height
     title: qsTr("Virtual Laboratory")
 

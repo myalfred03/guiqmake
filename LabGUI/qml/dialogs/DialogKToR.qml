@@ -65,6 +65,8 @@ Dialog {
                   + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
                   + "eu aliquam enim suscipit."
                 wrapMode: Label.Wrap
+                horizontalAlignment: Text.AlignJustify
+
                 }
 
             Label {

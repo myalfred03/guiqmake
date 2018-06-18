@@ -9,121 +9,99 @@ Pane {
     property bool vis: false
     visible: vis
 
-//    function showSubMenu(url) {
-//        if (stackView.depth > 1)
-//            stackView.pop()
-//        stackView.push(url)
-//    }
+    function showSubMenu(url) {
+        if (stackView.depth > 1)
+            stackView.pop()
+        stackView.push(url)
+    }
 
 //    function showMainMenu() {
 //        if (stackView.depth > 1)
 //            stackView.pop()
 //    }
 
-    Component {
-        id: menuButton
-        RoundButton {
-            Material.background: "#41cd52"
-            focusPolicy: Qt.NoFocus
-        }
-    }
-
     ColumnLayout {
         spacing: 30
         anchors.fill: parent
 
-        Loader {
-            id: learning
-            sourceComponent:  menuButton
-            anchors.top: parent.top
+        ButtonGroup {
+            id: menuButtons
+        }
+
+        RoundButton {
+            id: simuTh
+            text: qsTr("Teoria en la Simulación")
+            checkable: true
             Layout.fillWidth: true
-            onLoaded: {
-                item.text = qsTr("Teoria en la Simulación")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:parent.top
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Simu/ScreenSimuTheoryR.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: learning.item
-//            onClicked: {
-//                learningScreen.refresh()
-//                showMainMenu()
-//            }
-        }
-
-        Loader {
-            id: editWords
-            anchors.top: learning.bottom
+        RoundButton {
+            id: simuSDF
+            text: qsTr("SDF y Simulación")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("SDF y Simulación")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:simuTh.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Simu/ScreenSimuSDF.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: editWords.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditWordsScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: addNewVocabulary
-            anchors.top: editWords.bottom
+        RoundButton {
+            id: simuEx
+            text: qsTr("Ejemplos de Simulacion")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Ejemplos de Simulacion")
-            }
-        }
-
-        Connections {
-            target: addNewVocabulary.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditVocabulariesScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: statistics
-            anchors.top: addNewVocabulary.bottom
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:simuSDF.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Simu/ScreenSimuScriptExample.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
+        RoundButton {
+            id: simuInfo
+            text: qsTr("Mas información")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Mas información")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:simuEx.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Simu/ScreenSimuInfo.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: statistics.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/StatisticScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: translate
-            anchors.top: statistics.bottom
+        RoundButton {
+            id: simuSimu
+            text: qsTr("Simula tu Robot")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Simula tu Robot")
-            }
-        }
-
-        Connections {
-            target: translate.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/TranslateScreen.qml")
-//            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:simuInfo.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Simu/ScreenSimuSimulando.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
         ToolButton {
             id:bwelcome
-            anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 200
+            anchors.bottomMargin: 50
             width: 100
             height: 100
             ToolTip.timeout: 3000
@@ -156,7 +134,6 @@ Pane {
                 onClicked: {
                            mainLab.vis = false
                            welcome.vis = true
-
                        }
 
                  }//Button Welcome

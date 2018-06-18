@@ -3,6 +3,7 @@ import QtQuick.Window 2.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2  //Dialogs, Scroll, Label, lib
 import Qt.labs.settings 1.0
+import QtQml.Models 2.3
 import QtQuick.Controls.Material 2.1
 import QtQuick.Controls.Universal 2.1
 import "Main"
@@ -18,7 +19,7 @@ Item {
     Image {
         id:imagef
         visible: vis
-        width: Screen.width
+        width: Screen.width-45
         height: Screen.height
         z: -1
         opacity: 1.0
@@ -59,7 +60,7 @@ Item {
                 id: about
                 visible: true
                 anchors.right: parent.right
-                anchors.rightMargin: 45
+                anchors.rightMargin: 5
                 anchors.top:parent.top
                 contentItem: Image {
                 fillMode: Image.Pad
@@ -77,7 +78,7 @@ Item {
         TabBar {
                 id: tabBar
                 anchors.right: parent.right
-                anchors.rightMargin: 0
+//                anchors.rightMargin: 45
                 anchors.left: parent.left
                 anchors.leftMargin: 0
                 anchors.top: toolBar.bottom
@@ -116,7 +117,10 @@ Item {
                           }
                 TabButton {
                     text: qsTr("Simulación de Robots")
+//                    anchors.right: parent.right
+//                    anchors.rightMargin: 45
                     onClicked: {
+
                         mRbiblio.vis=false
                         mRmodel.vis=false
                         mRkine.vis=false
@@ -130,9 +134,9 @@ Item {
             id:panemenu
             anchors.top: tabBar.bottom
             anchors.topMargin: 5
-    //        anchors.bottom: bwelcome.top
+            anchors.bottom: imagef.bottom
             width: Math.min(imagef.width, imagef.height) / 3
-            height: imagef.height //- toolBar.height
+            //height: 500 //- toolBar.height
 
 
             MRbiblio{
@@ -154,14 +158,15 @@ Item {
 
                  }//panemenu
 
-        Pane {
+        Page {
             id: mainmenu
             focus: true
-            width: imagef.width - panemenu.width
+            width: imagef.width - (panemenu.width +5)
             height: imagef.height - (toolBar.height + tabBar.height)
             anchors.top: tabBar.bottom
             anchors.topMargin: 5
             anchors.left: panemenu.right
+            anchors.bottom: imagef.bottom
 //            anchors.leftMargin: 5
 
 
@@ -182,7 +187,7 @@ Item {
                     when: panemenu.visible
                     PropertyChanges {
                         target: mainmenu
-                        width: imagef.width - panemenu.width
+                        width: imagef.width - (panemenu.width +5)
                         anchors.top: tabBar.bottom
                         anchors.topMargin: 5
                         anchors.left: panemenu.right
@@ -192,64 +197,25 @@ Item {
                 }
             ]
 
-            StackView {
-                id: stackView
-                anchors.fill: parent
-                focus: true
-                initialItem: FirstSCmenu { id: firstSCmenu }
-                pushEnter: StackViewCommonTransition {}
-                popEnter: StackViewCommonTransition {}
-                popExit: StackViewCommonTransition {}
-                pushExit: StackViewCommonTransition {}
-                focusPolicy: Qt.StrongFocus
-                       }
+                StackView {
+                    id: stackView
+                    anchors.fill: parent
+
+//                    anchors.right: parent.right
+//                    anchors.rightMargin: 45
+                    focus: true
+                    initialItem: FirstSCmenu { id: firstSCmenu }
+//                    pop:stackView.pop(null)
+
+//                    pushEnter: stackView.clear()
+                    pushEnter: StackViewCommonTransition {}
+                    popEnter: StackViewCommonTransition {}
+                    popExit: StackViewCommonTransition {}
+                    pushExit: StackViewCommonTransition {}
+                    focusPolicy: Qt.StrongFocus
+                           }
+
             }
-
-//        ToolButton {
-//            id:bwelcome
-//            anchors.left: parent.left
-//            anchors.leftMargin: 10
-//            anchors.bottom: parent.bottom
-//            anchors.bottomMargin: 30
-//            width: 100
-//            height: 100
-//            ToolTip.timeout: 3000
-//            ToolTip.delay : 150
-//            ToolTip.visible: hovered
-//            ToolTip.text: "Ir a Bienvenida."
-
-//            ColumnLayout {
-//                id: aboutC
-//                spacing: 2
-//                anchors.centerIn: parent
-
-//                Image {
-//                    source: "qrc:/img/welcome.png"
-//                    sourceSize.width: 65
-//                    sourceSize.height: 65
-//                    fillMode: Image.PreserveAspectCrop
-//                    anchors.horizontalCenter: parent.horizontalCenter
-//                      }
-
-//                Text {
-//                    text: "Welcome"
-//                    font.pointSize: 10
-//                    font.bold: true
-//                    color: "#FFFFFF"
-//                    anchors.horizontalCenter: parent.horizontalCenter
-//                    wrapMode: Label.Wrap
-//                      }
-//                 }
-//                onClicked: {
-//                           vis = false
-//                           welcome.vis = true
-
-//                       }
-
-//                 }//Button Welcome
-
-
-
 
 
           }//image

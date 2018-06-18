@@ -23,7 +23,7 @@ Item {
     Image {      
         id:imagef
         visible: vis
-        width: Screen.width
+        width: Screen.width-45
         height: Screen.height
         z: -1
         opacity: 1.0
@@ -36,7 +36,7 @@ Item {
             id:banner
             x: 0
             y: 0
-            width: Screen.width
+            width: Screen.width-45
             height: 95
             anchors.top: parent.top
             color: "#00000000"
@@ -79,7 +79,7 @@ Item {
             Rectangle{
                 id:rlogoNIC
                 anchors.right: parent.right
-                anchors.rightMargin: 46
+                anchors.rightMargin: 5
                 anchors.left: welcom.right
                 anchors.leftMargin: 0
                 anchors.bottom: parent.bottom
@@ -176,7 +176,7 @@ Item {
             Item {
                 id: logoNIC
                 anchors.right: parent.right
-                anchors.rightMargin: 15
+                anchors.rightMargin: 3
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 0
                 anchors.top: parent.top
@@ -197,7 +197,7 @@ Item {
 
                 Image {
                     id: image3
-                    x: 125
+                    x: 135
                     y: 7
                     width: 133
                     height: 79
@@ -270,7 +270,7 @@ Item {
             transformOrigin: Item.Center
             spacing: 1
             anchors.right: parent.right
-            anchors.rightMargin: 350
+            anchors.rightMargin: 280
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 70
             anchors.left: parent.left
@@ -376,7 +376,7 @@ Item {
         Rectangle{
             id:rowR
             anchors.right: parent.right
-            anchors.rightMargin: 260
+            anchors.rightMargin: 180
             anchors.top: banner.bottom
             anchors.topMargin: 70
             anchors.bottom: rowM.bottom
@@ -417,7 +417,7 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: 200
             anchors.right: parent.right
-            anchors.rightMargin: 280
+            anchors.rightMargin: 200
 
             Button {
                 id: biblio
@@ -746,7 +746,7 @@ Item {
 
         Button {
         anchors.right: parent.right
-        anchors.rightMargin: 60
+        anchors.rightMargin: 10
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
         width: 100

@@ -7,123 +7,105 @@ Pane {
     width: Math.min(imagef.width, imagef.height) / 3
     height: imagef.height //- toolBar.height
     property bool vis: false
+//    property real itemon: 0
     visible: vis
 
-//    function showSubMenu(url) {
-//        if (stackView.depth > 1)
-//            stackView.pop()
-//        stackView.push(url)
-//    }
+    function showSubMenu(url) {
+        if (stackView.depth > 1)
+            stackView.pop()
+        stackView.push(url)
+    }
 
 //    function showMainMenu() {
 //        if (stackView.depth > 1)
 //            stackView.pop()
 //    }
 
-    Component {
-        id: menuButton
-        RoundButton {
-            Material.background: "#41cd52"
-            focusPolicy: Qt.NoFocus
-        }
-    }
 
     ColumnLayout {
         spacing: 30
         anchors.fill: parent
 
-        Loader {
-            id: learning
-            sourceComponent:  menuButton
-            anchors.top: parent.top
+        ButtonGroup {
+            id: menuButtons
+        }
+
+        RoundButton {
+            id: modelTh
+            text: qsTr("Teoria de Modelacion")
+            checkable: true
             Layout.fillWidth: true
-            onLoaded: {
-                item.text = qsTr("Teoria de Modelacion")
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:parent.top
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Model/ScreenModelTheoryR.qml")
+//            itemon=1
             }
-        }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: learning.item
-//            onClicked: {
-//                learningScreen.refresh()
-//                showMainMenu()
-//            }
-        }
-
-        Loader {
-            id: editWords
-            anchors.top: learning.bottom
+        RoundButton {
+            id: modelURDF
+            text: qsTr("Lenguaje URDF")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Lenguaje URDF")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:modelTh.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Model/ScreenModelURDF.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: editWords.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditWordsScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: addNewVocabulary
-            anchors.top: editWords.bottom
+        RoundButton {
+            id: modelEx
+            text: qsTr("Ejemplos modelos")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Ejemplos modelos")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:modelURDF.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Model/ScreenModelExample.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: addNewVocabulary.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditVocabulariesScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: statistics
-            anchors.top: addNewVocabulary.bottom
+        RoundButton {
+            id: modelInfo
+            text: qsTr("Mas información")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Mas información")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:modelEx.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Model/ScreenModelInfo.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: statistics.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/StatisticScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: translate
-            anchors.top: statistics.bottom
+        RoundButton {
+            id: modelRobo
+            text: qsTr("Modela tu Robot")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Modela tu Robot")
-            }
-        }
-
-        Connections {
-            target: translate.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/TranslateScreen.qml")
-//            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:modelInfo.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Model/ScreenModelModelando.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
         ToolButton {
             id:bwelcome
-            anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 200
+            anchors.bottomMargin: 50
             width: 100
             height: 100
             ToolTip.timeout: 3000
@@ -156,7 +138,6 @@ Pane {
                 onClicked: {
                            mainLab.vis = false
                            welcome.vis = true
-
                        }
 
                  }//Button Welcome

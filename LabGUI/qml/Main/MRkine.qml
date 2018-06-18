@@ -9,121 +9,101 @@ Pane {
     property bool vis: false
     visible: vis
 
-//    function showSubMenu(url) {
-//        if (stackView.depth > 1)
-//            stackView.pop()
-//        stackView.push(url)
-//    }
+    function showSubMenu(url) {
+        if (stackView.depth > 1)
+            stackView.pop()
+        stackView.push(url)
+    }
 
 //    function showMainMenu() {
 //        if (stackView.depth > 1)
 //            stackView.pop()
 //    }
 
-    Component {
-        id: menuButton
-        RoundButton {
-            Material.background: "#41cd52"
-            focusPolicy: Qt.NoFocus
-        }
-    }
 
     ColumnLayout {
         spacing: 30
         anchors.fill: parent
 
-        Loader {
-            id: learning
-            sourceComponent:  menuButton
-            anchors.top: parent.top
+        ButtonGroup {
+            id: menuButtons
+        }
+
+        RoundButton {
+            id: kinemTh
+            text: qsTr("Teoria de Cinematica")
+            checkable: true
             Layout.fillWidth: true
-            onLoaded: {
-                item.text = qsTr("Teoria de Cinematica")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:parent.top
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemTheoryR.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: learning.item
-//            onClicked: {
-//                learningScreen.refresh()
-//                showMainMenu()
-//            }
-        }
-
-        Loader {
-            id: editWords
-            anchors.top: learning.bottom
+        RoundButton {
+            id: kinemURDF
+            text: qsTr("URDF y Cinematica")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("URDF y Cinematica")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:kinemTh.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemURDF.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: editWords.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditWordsScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: addNewVocabulary
-            anchors.top: editWords.bottom
+        RoundButton {
+            id: kinemCalc
+            text: qsTr("Calculos de Cinématica")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Calculos de Cinématica")
-            }
-        }
-
-        Connections {
-            target: addNewVocabulary.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditVocabulariesScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: statistics
-            anchors.top: addNewVocabulary.bottom
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:kinemURDF.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemCalcExample.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
+        RoundButton {
+            id: kinemInfo
+            text: qsTr("Mas información")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Mas información")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:kinemCalc.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemInfo.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: statistics.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/StatisticScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: translate
-            anchors.top: statistics.bottom
+        RoundButton {
+            id: kinemSimu
+            text: qsTr("Cinematica de tu Robot")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Cinematica de tu Robot")
-            }
-        }
-
-        Connections {
-            target: translate.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/TranslateScreen.qml")
-//            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:kinemInfo.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemCinematica.qml")
+                launcher.launch()
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
         ToolButton {
             id:bwelcome
-            anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 200
+            anchors.bottomMargin: 50
             width: 100
             height: 100
             ToolTip.timeout: 3000
@@ -156,7 +136,6 @@ Pane {
                 onClicked: {
                            mainLab.vis = false
                            welcome.vis = true
-
                        }
 
                  }//Button Welcome

@@ -4,14 +4,15 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls.Material 2.0
 
 Pane {
-    width: Math.min(imagef.width, imagef.height) / 3
-    height: imagef.height //- toolBar.height
+//    width: Math.min(imagef.width, imagef.height) / 3
+//    height:  //- toolBar.height
     property bool vis: true
+    property bool bcheck: false
     visible: vis
 
     function showSubMenu(url) {
-        if (stackView.depth > 1)
-            stackView.pop()
+        if (stackView.depth > 1 )
+            stackView.pop(null)
         stackView.push(url)
     }
 
@@ -20,111 +21,90 @@ Pane {
 //            stackView.pop()
 //    }
 
-    Component {
-        id: menuButton
-        Button {
-            Material.background: "#41cd52"
-            focusPolicy: Qt.NoFocus
-//            checkable: true
-            Keys.onReturnPressed: clicked()
-
-        }
-    }
 
     ColumnLayout {
         spacing: 30
         anchors.fill: parent
 
-        Loader {
-            id: learning
-            sourceComponent:  menuButton
-            anchors.top: parent.top
-            Layout.fillWidth: true
-            onLoaded: {
-                item.text = qsTr("Guia de Uso de LAB")
-            }
+        ButtonGroup {
+            id: menuButtons
+
         }
 
-        Connections {
-            target: learning.item
+        RoundButton {
+            id: biblioGuide
+            text: qsTr("Guia de uso de LAB")
+            checkable: true
+            Layout.fillWidth: true
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:parent.top
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioGuideLAB.qml")
-            }
-        }
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Loader {
-            id: editWords
-            anchors.top: learning.bottom
+        RoundButton {
+            id: biblioTh
+            text: qsTr("Teoria de Robots")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Libros de Robotica")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:biblioGuide.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioTheoryR.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
+        RoundButton {
+            id: biblioAcad
+            text: qsTr("Articulos academicos")
+            checkable: true
+            Layout.fillWidth: true
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:biblioTh.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioArticleR.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: editWords.item
+        RoundButton {
+            id: biblioBook
+            text: qsTr("Libros de Robotica")
+            checkable: true
+            Layout.fillWidth: true
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:biblioAcad.bottom
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioBookR.qml")
-            }
-        }
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Loader {
-            id: addNewVocabulary
-            anchors.top: editWords.bottom
+        RoundButton {
+            id: biblioROS
+            text: qsTr("Libros ROS")
+            checkable: true
             Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Teoria de Robots")
-            }
-        }
+            Material.accent: "#41cd52"
+            Material.theme: Material.Dark
+            anchors.top:biblioBook.bottom
+            onClicked: {
+                showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioBookROS.qml")
+                       }
+            ButtonGroup.group: menuButtons
+                    }
 
-        Connections {
-            target: addNewVocabulary.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/EditVocabulariesScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: statistics
-            anchors.top: addNewVocabulary.bottom
-            Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Articulos academicos")
-            }
-        }
-
-        Connections {
-            target: statistics.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/StatisticScreen.qml")
-//            }
-        }
-
-        Loader {
-            id: translate
-            anchors.top: statistics.bottom
-            Layout.fillWidth: true
-            sourceComponent: menuButton
-            onLoaded: {
-                item.text = qsTr("Libros ROS")
-            }
-        }
-
-        Connections {
-            target: translate.item
-//            onClicked: {
-//                showSubMenu("qrc:/screens/TranslateScreen.qml")
-//            }
-        }
         ToolButton {
             id:bwelcome
-            anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 200
+            anchors.bottomMargin: 50
             width: 100
             height: 100
             ToolTip.timeout: 3000
@@ -157,7 +137,6 @@ Pane {
                 onClicked: {
                            mainLab.vis = false
                            welcome.vis = true
-
                        }
 
                  }//Button Welcome

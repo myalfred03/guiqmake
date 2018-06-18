@@ -5,17 +5,13 @@ import QtQuick.Controls.Material 2.0
 Pane {
     ColumnLayout {
              anchors.fill: parent
-             CheckBox { text: qsTr("E-mail") }
-             CheckBox { text: qsTr("Calendar") }
-             CheckBox { text: qsTr("Contacts") }
-             Image {
+             AnimatedImage {
                  id: image2
-                 anchors.left: parent.left
-                 anchors.leftMargin: 6
-                 width: 133
-                 height: 88
-                 fillMode: Image.PreserveAspectFit
-                 source: "qrc:/img/bookPc.png"
+                 anchors.horizontalCenter: parent.horizontalCenter
+//                 width: 200
+//                 height: 200
+//                 fillMode: Image.PreserveAspectFit
+                 source: "qrc:/img/gif3.gif"
 
                    }
 
