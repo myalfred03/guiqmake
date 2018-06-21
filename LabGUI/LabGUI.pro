@@ -1,13 +1,18 @@
 #TEMPLATE = app
 
-QT += qml quick quickcontrols2 charts
+QT += qml quick quickcontrols2 charts webengine
 
 CONFIG += c++11
 
 SOURCES += main.cpp \
     launcher.cpp
 
-RESOURCES += qml.qrc
+HEADERS += \
+    launcher.h
+
+
+RESOURCES += qml.qrc \
+    pdf.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -31,5 +36,11 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-HEADERS += \
-    launcher.h
+
+COPY_CONFIG = 3rdParty pdf
+copy_cmd.input = COPY_CONFIG
+copy_cmd.output = ${QMAKE_FILE_IN_BASE}${QMAKE_FILE_EXT}
+copy_cmd.commands = $$QMAKE_COPY_DIR ${QMAKE_FILE_IN} ${QMAKE_FILE_OUT}
+copy_cmd.CONFIG += no_link_no_clean
+copy_cmd.variable_out = PRE_TARGETDEPS
+QMAKE_EXTRA_COMPILERS += copy_cmd

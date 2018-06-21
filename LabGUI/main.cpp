@@ -22,6 +22,11 @@
 #include <QSysInfo>
 #include <QSystemTrayIcon>
 #include <QtQml>
+#include <qtwebengineglobal.h>
+
+//pdfjsexample
+#include <QDir>
+
 
 
 
@@ -33,6 +38,7 @@ int main(int argc, char *argv[])
     QIcon icon;
     icon.addFile(QStringLiteral(":/img/UNI-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
     app.setWindowIcon(icon);
+    QtWebEngine::initialize();
 
     QSettings settings;
     QString style = QQuickStyle::name();
@@ -46,8 +52,30 @@ int main(int argc, char *argv[])
 
 
     QQmlApplicationEngine engine;
+
+    //PDF File
+    QString pathToPDFjs = QString("file:///%1/%2")
+            .arg(QDir::currentPath())
+            .arg("3rdParty/pdfjs-1.7.225-dist/web/viewer.html");
+    QString pdfcv    = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/CURRICULUMYESER.pdf");
+//    QString pdfcraig = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/Robotica-JohnJCraig.pdf");
+//    QString pdfhand  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/HandbookofRobotics-Springer.pdf");
+//    QString pdffund  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/FundamentosDeRoboticaBarrientos2daEdicion.pdf");
+    QUrl urlcv = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcv);
+//    QUrl urlhn = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfhand);
+//    QUrl urlf  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdffund);
+//    QUrl urlc  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcraig);
+    engine.rootContext()->setContextProperty("urlcv", urlcv);
+//    engine.rootContext()->setContextProperty("urlhn", urlhn);
+//    engine.rootContext()->setContextProperty("urlf", urlf);
+//    engine.rootContext()->setContextProperty("urlcraig", urlc);
+
+    //PDF File
+
     engine.rootContext()->setContextProperty("availableStyles", QQuickStyle::availableStyles());
     engine.rootContext()->setContextProperty("launcher", &launch);
+
+
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     QObject *root = nullptr;

@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ROSGUI</class>
  <widget class="QMainWindow" name="ROSGUI">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -179,8 +182,8 @@
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>468</width>
-                     <height>69</height>
+                     <width>496</width>
+                     <height>71</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -238,8 +241,8 @@
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>456</width>
-                     <height>69</height>
+                     <width>334</width>
+                     <height>71</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -1344,7 +1347,7 @@
      <x>0</x>
      <y>0</y>
      <width>1267</width>
-     <height>18</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFILE">
