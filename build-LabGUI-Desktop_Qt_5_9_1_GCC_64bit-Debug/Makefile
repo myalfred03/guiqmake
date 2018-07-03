@@ -248,7 +248,7 @@ TARGET        = LabGUI
 first: all
 ####### Build rules
 
-$(TARGET): 3rdParty pdf $(OBJECTS)  
+$(TARGET): 3rdParty pdf modelos $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -654,7 +654,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../LabGUI/3rdParty ../LabGUI/pdf $(DISTDIR)/
+	$(COPY_FILE) --parents ../LabGUI/3rdParty ../LabGUI/pdf ../LabGUI/modelos $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/qml.qrc ../LabGUI/pdf.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/launcher.h $(DISTDIR)/
@@ -681,14 +681,17 @@ check: first
 
 benchmark: first
 
-compiler_copy_cmd_make_all: 3rdParty pdf
+compiler_copy_cmd_make_all: 3rdParty pdf modelos
 compiler_copy_cmd_clean:
-	-$(DEL_FILE) 3rdParty pdf
+	-$(DEL_FILE) 3rdParty pdf modelos
 3rdParty: ../LabGUI/3rdParty
 	cp -f -R ../LabGUI/3rdParty 3rdParty
 
 pdf: ../LabGUI/pdf
 	cp -f -R ../LabGUI/pdf pdf
+
+modelos: ../LabGUI/modelos
+	cp -f -R ../LabGUI/modelos modelos
 
 compiler_rcc_make_all: qrc_qml.cpp qrc_pdf.cpp
 compiler_rcc_clean:

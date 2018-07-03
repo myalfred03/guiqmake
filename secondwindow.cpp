@@ -7,7 +7,8 @@ SecondWindow::SecondWindow(QWidget *parent) :
     ui(new Ui::SecondWindow)
 {
     ui->setupUi(this);
-   QPixmap pix(":/images/img/CD.png");
+   QPixmap pix(":/images/img/Virtual Laboratory_078.png");
+   pix.scaledToHeight(34);
    ui->label->setPixmap(pix);
 }
 

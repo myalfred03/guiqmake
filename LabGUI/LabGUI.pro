@@ -4,11 +4,10 @@ QT += qml quick quickcontrols2 charts webengine
 
 CONFIG += c++11
 
-SOURCES += main.cpp \
+SOURCES += main.cpp\
     launcher.cpp
 
-HEADERS += \
-    launcher.h
+HEADERS += launcher.h
 
 
 RESOURCES += qml.qrc \
@@ -37,7 +36,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 
-COPY_CONFIG = 3rdParty pdf
+COPY_CONFIG = 3rdParty pdf modelos
 copy_cmd.input = COPY_CONFIG
 copy_cmd.output = ${QMAKE_FILE_IN_BASE}${QMAKE_FILE_EXT}
 copy_cmd.commands = $$QMAKE_COPY_DIR ${QMAKE_FILE_IN} ${QMAKE_FILE_OUT}

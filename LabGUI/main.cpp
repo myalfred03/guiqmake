@@ -35,6 +35,8 @@ int main(int argc, char *argv[])
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     launcher launch;
+//    launcher launch2;
+
     QIcon icon;
     icon.addFile(QStringLiteral(":/img/UNI-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
     app.setWindowIcon(icon);
@@ -74,6 +76,8 @@ int main(int argc, char *argv[])
 
     engine.rootContext()->setContextProperty("availableStyles", QQuickStyle::availableStyles());
     engine.rootContext()->setContextProperty("launcher", &launch);
+//    engine.rootContext()->setContextProperty("launcher2", &launch2);
+
 
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

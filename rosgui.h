@@ -2,12 +2,15 @@
 #define ROSGUI_H
 
 #include <QMainWindow>
-#include "secondwindow.h"
-#include "thirdwindow.h"
-#include "fourth.h"
+#include <QWidget>
+#include <QMessageBox>
+//#include "secondwindow.h"
+//#include "thirdwindow.h"
+//#include "fourth.h"
 
 namespace Ui {
 class ROSGUI;
+class DialogOptionsWidget;
 }
 
 class ROSGUI : public QMainWindow
@@ -19,9 +22,9 @@ public:
     ~ROSGUI();
 
 public slots:
-    void openCD(); //make a new function to call the window
-    void openCI();
-    void openDH();
+    void openDialoginfo(); //make a new function to call the window
+//    void openCI();
+//    void openDH();
     void updateSpinboxes();
     void updateSlider();
     void updateDialer();
@@ -29,11 +32,11 @@ public slots:
 
 private slots:
 
-    void on_pushButton_3_clicked();
+//    void on_pushButton_3_clicked();
 
-    void on_pushButton_2_clicked();
+//    void on_pushButton_2_clicked();
 
-    void on_pushButton_4_clicked();
+//    void on_pushButton_4_clicked();
 
     void on_actionOpen_triggered();
 
@@ -49,11 +52,15 @@ private slots:
     void on_5DOF();
     void on_6DOF();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::ROSGUI *ui;
-    SecondWindow *secwindow;
-    thirdwindow *thwindow;
-    fourth *fourwindow;
+//    SecondWindow *secwindow;
+//    thirdwindow *thwindow;
+//    fourth *fourwindow;
+    QLabel *informationLabel;
+
 };
 
 #endif // ROSGUI_H

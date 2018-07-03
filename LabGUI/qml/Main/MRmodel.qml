@@ -97,6 +97,7 @@ Pane {
             anchors.top:modelInfo.bottom
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Model/ScreenModelModelando.qml")
+                launcher.launch2()
                        }
             ButtonGroup.group: menuButtons
                     }

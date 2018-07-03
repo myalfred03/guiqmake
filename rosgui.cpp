@@ -1,6 +1,5 @@
 #include "rosgui.h"
 #include "ui_rosgui.h"
-#include "ui_mainwindow.h"
 //#include "secondwindow.h"
 const double FACTOR = 1;
 
@@ -64,40 +63,48 @@ ROSGUI::~ROSGUI()
     delete ui;
 }
 
-void ROSGUI::openCD()
+void ROSGUI::openDialoginfo()
 {
-    secwindow = new SecondWindow(this);
-    secwindow->show();
+   /* QMessageBox::StandardButton reply;
+    reply =*/ QMessageBox::information(this, tr("Teoria de Cinematica"), tr("<p>Se encuentra toda la informacion de cinematica directa, " \
+                                                                                "y Cinematica inversa en la pagina principal de este laboratorio virtual." \
+                                                                                "<p>Sigue las instrucciones de la guia del uso y ejemplos  " \
+                                                                                "Para el adecuado uso de esta ventana de practicas.")
+                                     );
+//    if (reply == QMessageBox::Ok)
+//        informationLabel->setText(tr("OK"));
+//    else
+//        informationLabel->setText(tr("Escape"));
 }
 
-void ROSGUI::openCI()
-{
-    thwindow = new thirdwindow(this);
-    thwindow->show();
-}
+//void ROSGUI::openCI()
+//{
+//    thwindow = new thirdwindow(this);
+//    thwindow->show();
+//}
 
-void ROSGUI::openDH()
-{
-    fourwindow = new fourth(this);
-    fourwindow->show();
-}
+//void ROSGUI::openDH()
+//{
+//    fourwindow = new fourth(this);
+//    fourwindow->show();
+//}
 
-void ROSGUI::on_pushButton_3_clicked()
-{
-openCD();
-}
+//void ROSGUI::on_pushButton_3_clicked()
+//{
+//openCD();
+//}
 
-void ROSGUI::on_pushButton_2_clicked()
-{
+//void ROSGUI::on_pushButton_2_clicked()
+//{
 
-    openCI();
+//    openCI();
 
-}
+//}
 
-void ROSGUI::on_pushButton_4_clicked()
-{
-    openDH();
-}
+//void ROSGUI::on_pushButton_4_clicked()
+//{
+//    openDH();
+//}
 
 
 
@@ -301,15 +308,11 @@ void ROSGUI::on_6DOF()
 
 
 
+void ROSGUI::on_pushButton_clicked()
+{
 
 
+    openDialoginfo();
 
 
-
-
-
-
-
-
-
-
+}

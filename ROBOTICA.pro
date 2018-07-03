@@ -25,25 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        rosgui.cpp \
-    secondwindow.cpp \
-    thirdwindow.cpp \
-    fourth.cpp \
+        rosgui.cpp
 
 HEADERS += \
-        rosgui.h \
-    secondwindow.h \
-    thirdwindow.h \
-    fourth.h \
-
+        rosgui.h
 
 FORMS += \
-        rosgui.ui \
-    secondwindow.ui \
-    thirdwindow.ui \
-    fourth.ui \
-    mainwindow.ui
-
+        rosgui.ui
 
 RESOURCES += \
     resources.qrc

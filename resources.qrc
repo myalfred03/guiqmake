@@ -9,5 +9,36 @@
         <file>img/CD.png</file>
         <file>img/dhparameter.png</file>
         <file>img/CI.png</file>
+        <file>img/noun_1036042_cc.png</file>
+        <file>img/noun_1450480_cc.png</file>
+        <file>img/1448635827949.png</file>
+        <file>img/ABB.png</file>
+        <file>img/Yaskawa_Motoman_Logo.png</file>
+        <file>img/noun_.png</file>
+        <file>img/noun_319786_cc.png</file>
+        <file>img/noun_1036029_cc.png</file>
+        <file>img/noun_1035985_cc (1).png</file>
+        <file>img/Virtual Laboratory_078.png</file>
+        <file>img/Interact.png</file>
+        <file>img/MoveCamera.png</file>
+        <file>img/Select.png</file>
+        <file>img/Measure.png</file>
+        <file>img/FocusCamera.png</file>
+    </qresource>
+    <qresource prefix="/robots/URDF">
+        <file>modelos/bmda3.urdf</file>
+        <file>modelos/irb120_3_58.urdf</file>
+        <file>modelos/irb5400.urdf</file>
+        <file>modelos/kr16_2.urdf</file>
+        <file>modelos/kr210l150.urdf</file>
+        <file>modelos/mh5.urdf</file>
+        <file>modelos/sia10f.urdf</file>
+        <file>modelos/sia20d.urdf</file>
+        <file>modelos/urdf.rviz</file>
+        <file>modelos/robot2dof.urdf</file>
+        <file>modelos/uni.urdf</file>
+        <file>modelos/pan_tilt.urdf</file>
+        <file>modelos/3dof.urdf</file>
+        <file>modelos/two_link.urdf</file>
     </qresource>
 </RCC>

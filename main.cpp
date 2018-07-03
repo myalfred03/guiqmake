@@ -1,8 +1,5 @@
 #include "rosgui.h"
-#include "secondwindow.h"
-#include "thirdwindow.h"
 #include <QApplication>
-#include "ui_mainwindow.h"
 
 int main(int argc, char *argv[])
 {

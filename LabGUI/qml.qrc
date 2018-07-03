@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
         <file>img/UNI-LOGOa.png</file>
         <file>qml/Welcome.qml</file>
         <file>img/UNI-icon.png</file>
@@ -519,5 +518,6 @@
         <file>3rdParty/pdfjs-1.7.225-dist/web/viewer.html</file>
         <file>3rdParty/pdfjs-1.7.225-dist/web/viewer.js</file>
         <file>3rdParty/pdfjs-1.7.225-dist/LICENSE</file>
+        <file>main.qml</file>
     </qresource>
 </RCC>
