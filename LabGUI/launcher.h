@@ -8,7 +8,7 @@ class launcher : public QObject
 {
     Q_OBJECT
 public:
-    explicit launcher(QObject *parent = nullptr);
+    launcher(QObject *parent = nullptr);
 
     Q_INVOKABLE void launch();
     Q_INVOKABLE void launch2();

@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
         QQuickStyle::setStyle(settings.value("style").toString());
 
     //Not Close APP
-    QApplication::setQuitOnLastWindowClosed(false);
+//    QApplication::setQuitOnLastWindowClosed(false);
 
 
     QQmlApplicationEngine engine;

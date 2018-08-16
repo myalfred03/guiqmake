@@ -277,6 +277,9 @@
                    </item>
                    <item row="11" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox4DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -287,6 +290,9 @@
                    </item>
                    <item row="10" column="1" rowspan="2">
                     <widget class="QDial" name="dial4DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -297,6 +303,9 @@
                    </item>
                    <item row="8" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox3DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -346,6 +355,9 @@
                    </item>
                    <item row="14" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox5DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -382,6 +394,9 @@
                    </item>
                    <item row="4" column="1" rowspan="2">
                     <widget class="QDial" name="dial2DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -395,6 +410,9 @@
                    </item>
                    <item row="5" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox2DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -452,6 +470,9 @@
                    </item>
                    <item row="1" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox1DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -469,6 +490,9 @@
                    </item>
                    <item row="17" column="1" rowspan="2">
                     <widget class="QDial" name="dial6DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -532,6 +556,9 @@
                    </item>
                    <item row="7" column="1" rowspan="2">
                     <widget class="QDial" name="dial3DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -571,6 +598,9 @@
                    </item>
                    <item row="18" column="3">
                     <widget class="QDoubleSpinBox" name="spinBox6DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el valor de movimiento con mas precision y luego ejecuta el movimiento</string>
+                     </property>
                      <property name="minimum">
                       <double>-180.000000000000000</double>
                      </property>
@@ -665,6 +695,9 @@
                    </item>
                    <item row="13" column="1" rowspan="2">
                     <widget class="QDial" name="dial5DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -678,6 +711,9 @@
                    </item>
                    <item row="0" column="1" rowspan="2">
                     <widget class="QDial" name="dial1DOF">
+                     <property name="toolTip">
+                      <string>Ajusta el dialer para reposicionar el robot</string>
+                     </property>
                      <property name="minimum">
                       <number>-180</number>
                      </property>
@@ -743,6 +779,9 @@
                        <width>16777215</width>
                        <height>25</height>
                       </size>
+                     </property>
+                     <property name="toolTip">
+                      <string>Posicion en metros  del TCP en el eje Z</string>
                      </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
@@ -966,6 +1005,9 @@
                        <height>25</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Posicion en grados  del TCP en el rotacional Yaw</string>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -1037,6 +1079,9 @@
                        <height>25</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Posicion en metros  del TCP en el eje X</string>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -1073,6 +1118,9 @@
                        <width>16777215</width>
                        <height>25</height>
                       </size>
+                     </property>
+                     <property name="toolTip">
+                      <string>Posicion en metros  del TCP en el eje Y</string>
                      </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
@@ -1148,6 +1196,9 @@
                        <height>25</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Posicion en grados  del TCP en el rotacional Pitch</string>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -1164,6 +1215,9 @@
                        <height>25</height>
                       </size>
                      </property>
+                     <property name="toolTip">
+                      <string>Posicion en grados  del TCP en el rotacional Roll</string>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -1179,6 +1233,9 @@
                        <pointsize>11</pointsize>
                        <italic>true</italic>
                       </font>
+                     </property>
+                     <property name="toolTip">
+                      <string>Ejecuta el movimiento de los SpinBox</string>
                      </property>
                      <property name="text">
                       <string>EJECUTAR MOVIMIENTO</string>
@@ -2759,113 +2816,181 @@
           </item>
           <item>
            <layout class="QGridLayout" name="gridLayout_19">
-            <item row="0" column="2">
-             <widget class="QComboBox" name="comboBox_2">
-              <item>
-               <property name="text">
-                <string>Interactuar</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/Interact.png</normaloff>:/images/img/Interact.png</iconset>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mover Camara</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/MoveCamera.png</normaloff>:/images/img/MoveCamera.png</iconset>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Seleccionar</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/Select.png</normaloff>:/images/img/Select.png</iconset>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Medir En Pantalla de Simulación</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/Measure.png</normaloff>:/images/img/Measure.png</iconset>
-               </property>
-              </item>
-             </widget>
-            </item>
             <item row="0" column="0">
-             <widget class="QComboBox" name="comboBox">
-              <property name="toolTip">
-               <string>&quot;Elige el perfil de visualizacion de tu robot&quot;</string>
-              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
-               <property name="text">
-                <string>Show All</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/noun_1036029_cc.png</normaloff>:/images/img/noun_1036029_cc.png</iconset>
-               </property>
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;Tools RVIZ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
               </item>
               <item>
-               <property name="text">
-                <string>Show only Robot</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/noun_.png</normaloff>:/images/img/noun_.png</iconset>
-               </property>
+               <widget class="QComboBox" name="comboBox">
+                <property name="toolTip">
+                 <string>&quot;Elige el perfil de visualizacion de tu robot&quot;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Show only Robot</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/noun_.png</normaloff>:/images/img/noun_.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Robot with Axes</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/noun_1035985_cc (1).png</normaloff>:/images/img/noun_1035985_cc (1).png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Axes with Names</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/noun_319786_cc.png</normaloff>:/images/img/noun_319786_cc.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Axes</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/noun_1450480_cc.png</normaloff>:/images/img/noun_1450480_cc.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show All</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/noun_1036029_cc.png</normaloff>:/images/img/noun_1036029_cc.png</iconset>
+                 </property>
+                </item>
+               </widget>
               </item>
               <item>
-               <property name="text">
-                <string>Show Robot with Axes</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/noun_1035985_cc (1).png</normaloff>:/images/img/noun_1035985_cc (1).png</iconset>
-               </property>
+               <widget class="QComboBox" name="comboBox_2">
+                <property name="toolTip">
+                 <string>Herramientas de interaccion con el modelo 3D</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Interactuar</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/Interact.png</normaloff>:/images/img/Interact.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Mover Camara</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/MoveCamera.png</normaloff>:/images/img/MoveCamera.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Seleccionar</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/Select.png</normaloff>:/images/img/Select.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Medir En Pantalla de Simulación</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/Measure.png</normaloff>:/images/img/Measure.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enfoque de Camara</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/FocusCamera.png</normaloff>:/images/img/FocusCamera.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Punto en coordenadas XYZ</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/PublishPoint.png</normaloff>:/images/img/PublishPoint.png</iconset>
+                 </property>
+                </item>
+               </widget>
               </item>
-              <item>
-               <property name="text">
-                <string>Show Axes with Names</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/noun_319786_cc.png</normaloff>:/images/img/noun_319786_cc.png</iconset>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Show Axes</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/images/img/noun_1450480_cc.png</normaloff>:/images/img/noun_1450480_cc.png</iconset>
-               </property>
-              </item>
-             </widget>
+             </layout>
             </item>
             <item row="0" column="1">
-             <widget class="QLabel" name="label_23">
-              <property name="font">
-               <font>
-                <family>Abyssinica SIL</family>
-                <pointsize>15</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>RVIZ  TOOLS</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_78">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;Tools MoveIt! &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_3">
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Show Trail </string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/kinetics.png</normaloff>:/images/img/kinetics.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Loop Animation</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/images/img/turn_left.png</normaloff>:/images/img/turn_left.png</iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Query Start</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Show Query Goal</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -3006,7 +3131,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
@@ -3022,7 +3147,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
     <hint type="destinationlabel">
@@ -3038,7 +3163,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
@@ -3054,11 +3179,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3070,11 +3195,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3086,7 +3211,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
@@ -3102,11 +3227,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
    </hints>
@@ -3118,11 +3243,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3134,11 +3259,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
    </hints>
@@ -3150,11 +3275,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>480</x>
+     <x>450</x>
      <y>162</y>
     </hint>
    </hints>
@@ -3166,11 +3291,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
    </hints>
@@ -3182,11 +3307,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3198,11 +3323,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3214,11 +3339,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3230,11 +3355,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
     <hint type="destinationlabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3246,11 +3371,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3262,11 +3387,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3278,11 +3403,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3294,11 +3419,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3310,11 +3435,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3326,11 +3451,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3342,11 +3467,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3358,11 +3483,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3374,11 +3499,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3390,11 +3515,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3406,11 +3531,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3422,11 +3547,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3438,11 +3563,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3454,11 +3579,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3470,11 +3595,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3486,11 +3611,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
+     <x>188</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3502,11 +3627,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3518,11 +3643,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3534,7 +3659,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
@@ -3550,11 +3675,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3566,11 +3691,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3582,7 +3707,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
@@ -3598,11 +3723,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
+     <x>273</x>
      <y>142</y>
     </hint>
    </hints>
@@ -3614,11 +3739,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3630,11 +3755,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
+     <x>359</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>141</y>
     </hint>
    </hints>
@@ -3646,11 +3771,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3662,11 +3787,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3678,11 +3803,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3694,7 +3819,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
@@ -3710,11 +3835,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>304</x>
+     <x>274</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3726,11 +3851,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
+     <x>103</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3742,7 +3867,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
@@ -3758,11 +3883,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
+     <x>189</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
    </hints>
@@ -3774,7 +3899,7 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
@@ -3790,11 +3915,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>475</x>
+     <x>445</x>
      <y>146</y>
     </hint>
     <hint type="destinationlabel">
-     <x>390</x>
+     <x>360</x>
      <y>146</y>
     </hint>
    </hints>

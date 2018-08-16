@@ -24,6 +24,10 @@
         <file>img/Select.png</file>
         <file>img/Measure.png</file>
         <file>img/FocusCamera.png</file>
+        <file>img/PublishPoint.png</file>
+        <file>img/kinetics.png</file>
+        <file>img/turn_left.png</file>
+        <file>img/anticlock.png</file>
     </qresource>
     <qresource prefix="/robots/URDF">
         <file>modelos/bmda3.urdf</file>
