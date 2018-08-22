@@ -37,7 +37,7 @@ Pane {
             when: tabBar.currentIndex==3
             PropertyChanges {
                 target: webView
-                url: urlcv
+                url: urlgzsv
             }
         }
     ]

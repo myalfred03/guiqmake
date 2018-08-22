@@ -59,6 +59,9 @@ int main(int argc, char *argv[])
     QString pathToPDFjs = QString("file:///%1/%2")
             .arg(QDir::currentPath())
             .arg("3rdParty/pdfjs-1.7.225-dist/web/viewer.html");
+    QString gazeboSimu  = QString("file:///%1/%2")
+            .arg(QDir::currentPath())
+            .arg("WebResources/index.html");
     QString pdfcv    = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/CURRICULUMYESER.pdf");
 //    QString pdfcraig = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/Robotica-JohnJCraig.pdf");
 //    QString pdfhand  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/HandbookofRobotics-Springer.pdf");
@@ -67,7 +70,9 @@ int main(int argc, char *argv[])
 //    QUrl urlhn = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfhand);
 //    QUrl urlf  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdffund);
 //    QUrl urlc  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcraig);
+    QUrl urlgz = QUrl::fromUserInput(gazeboSimu);
     engine.rootContext()->setContextProperty("urlcv", urlcv);
+    engine.rootContext()->setContextProperty("urlgzsv", urlgz);
 //    engine.rootContext()->setContextProperty("urlhn", urlhn);
 //    engine.rootContext()->setContextProperty("urlf", urlf);
 //    engine.rootContext()->setContextProperty("urlcraig", urlc);

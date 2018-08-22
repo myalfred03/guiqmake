@@ -519,5 +519,8 @@
         <file>3rdParty/pdfjs-1.7.225-dist/web/viewer.js</file>
         <file>3rdParty/pdfjs-1.7.225-dist/LICENSE</file>
         <file>main.qml</file>
+        <file>launcher.cpp</file>
+        <file>launcher.h</file>
+        <file>main.cpp</file>
     </qresource>
 </RCC>
