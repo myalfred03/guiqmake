@@ -92,6 +92,7 @@ Item {
                         mRmodel.vis=false
                         mRkine.vis=false
                         mRsimu.vis=false
+                        mRmorfo.vis=false
                         panemenu.visible = true
                                 }
                           }
@@ -102,6 +103,18 @@ Item {
                         mRmodel.vis=true
                         mRkine.vis=false
                         mRsimu.vis=false
+                        mRmorfo.vis=false
+                        panemenu.visible = true
+                               }
+                          }
+                TabButton {
+                    text: qsTr("Morfologia de Robots I")
+                    onClicked: {
+                        mRbiblio.vis=false
+                        mRmodel.vis=false
+                        mRkine.vis=false
+                        mRsimu.vis=false
+                        mRmorfo.vis=true
                         panemenu.visible = true
                                }
                           }
@@ -112,6 +125,7 @@ Item {
                         mRmodel.vis=false
                         mRkine.vis=true
                         mRsimu.vis=false
+                        mRmorfo.vis=false
                         panemenu.visible = true
                                }
                           }
@@ -125,6 +139,7 @@ Item {
                         mRmodel.vis=false
                         mRkine.vis=false
                         mRsimu.vis=true
+                        mRmorfo.vis=false
                         panemenu.visible = true
                                }
                            }
@@ -155,6 +170,11 @@ Item {
                 id:mRsimu
                 anchors.fill: parent
                   }
+
+            MRmorfo{
+                id:mRmorfo
+                anchors.fill: parent
+            }
 
                  }//panemenu
 

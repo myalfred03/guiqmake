@@ -11,7 +11,8 @@ HEADERS += launcher.h
 
 
 RESOURCES += qml.qrc \
-    pdf.qrc
+    pdf.qrc \
+    videos.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -36,7 +37,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 
-COPY_CONFIG = 3rdParty pdf modelos WebResources
+COPY_CONFIG = 3rdParty pdf modelos WebResources video
 copy_cmd.input = COPY_CONFIG
 copy_cmd.output = ${QMAKE_FILE_IN_BASE}${QMAKE_FILE_EXT}
 copy_cmd.commands = $$QMAKE_COPY_DIR ${QMAKE_FILE_IN} ${QMAKE_FILE_OUT}

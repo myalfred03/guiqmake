@@ -522,5 +522,31 @@
         <file>launcher.cpp</file>
         <file>launcher.h</file>
         <file>main.cpp</file>
+        <file>qml/Main/MRmorfo.qml</file>
+        <file>qml/Main/Morfo/Content/ExModel1.qml</file>
+        <file>qml/Main/Morfo/Content/ExModel2.qml</file>
+        <file>qml/Main/Morfo/Content/ExModelInd1.qml</file>
+        <file>qml/Main/Morfo/Content/ExModelInd2.qml</file>
+        <file>qml/Main/Morfo/Content/Info1.qml</file>
+        <file>qml/Main/Morfo/Content/Info2.qml</file>
+        <file>qml/Main/Morfo/Content/ThDynam.qml</file>
+        <file>qml/Main/Morfo/Content/ThEsl.qml</file>
+        <file>qml/Main/Morfo/Content/ThKinem.qml</file>
+        <file>qml/Main/Morfo/Content/ThUn.qml</file>
+        <file>qml/Main/Morfo/Content/URDFDetails.qml</file>
+        <file>qml/Main/Morfo/Content/URDFDynam.qml</file>
+        <file>qml/Main/Morfo/Content/URDFEsla.qml</file>
+        <file>qml/Main/Morfo/Content/URDFJoint.qml</file>
+        <file>qml/Main/Morfo/ScreenMorfoExample.qml</file>
+        <file>qml/Main/Morfo/ScreenMorfoInfo.qml</file>
+        <file>qml/Main/Morfo/ScreenMorfoModelando.qml</file>
+        <file>qml/Main/Morfo/ScreenMorfoTheoryR.qml</file>
+        <file>qml/Main/Morfo/ScreenMorfoURDF.qml</file>
+        <file>qml/Main/Morfo/StackViewCommonTransition.qml</file>
+        <file>img/player/backward.png</file>
+        <file>img/player/forward.png</file>
+        <file>img/player/pause.png</file>
+        <file>img/player/play.png</file>
+        <file>img/player/stop.png</file>
     </qresource>
 </RCC>

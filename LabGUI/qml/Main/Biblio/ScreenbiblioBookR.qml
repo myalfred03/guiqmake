@@ -135,18 +135,15 @@ Pane {
             if (show === true) {
                 busy.running = false
                 webViewPlaceholder.visible = false
-            } else {
+                               }
+            else {
                 webViewPlaceholder.visible = true
                 busy.running = true
-            }
-        }
+                   }
+                            }
 
 
-
-
-    }
-
-
+    } //WebEngine
 
     }
 

@@ -1,4 +1,4 @@
-import QtQuick 2.9
+import QtQuick 2.0
 import QtQuick.Window 2.0 //Screen.widht
 import QtGraphicalEffects.private 1.0
 import QtQuick.Controls.Universal 2.0
@@ -37,8 +37,9 @@ Item {
             x: 0
             y: 0
             width: Screen.width-45
-            height: 95
+            height: 185
             anchors.top: parent.top
+//            anchors.bottom: rowR.top
             color: "#00000000"
             opacity: 1
             anchors.topMargin: 8
@@ -46,14 +47,15 @@ Item {
 
             Rectangle{
                 id:welcom
-                anchors.right: logoNIC.left
-                anchors.rightMargin: 0
+                anchors.right: parent.right
+                anchors.rightMargin: 2
                 anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: 0
-                anchors.left: logoUNI.right
-                anchors.leftMargin: 0
+                anchors.topMargin: 15
+//                anchors.bottom: rlogoUNI.top
+//                anchors.bottomMargin: 0
+                height: 70
+                anchors.left: parent.left
+                anchors.leftMargin: 2
                 color: "#191c28"
                 radius: 25
                 border.width: 3
@@ -62,14 +64,17 @@ Item {
                      }
             Rectangle{
                 id:rlogoUNI
-                anchors.right:welcom.left
-                anchors.rightMargin: 0
+//                anchors.right:rlogoNIC.left
+//                anchors.rightMargin: 0
                 anchors.left: parent.left
-                anchors.leftMargin: 0
+                anchors.leftMargin: 2
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
+                width: 402
+
+
+                anchors.top: welcom.bottom
+                anchors.topMargin: 2
                 color: "#191c28"
                 radius: 25
                 border.width: 3
@@ -78,14 +83,18 @@ Item {
                       }
             Rectangle{
                 id:rlogoNIC
+                x: 1016
                 anchors.right: parent.right
                 anchors.rightMargin: 5
-                anchors.left: welcom.right
-                anchors.leftMargin: 0
+//                anchors.left: rlogoUNI.right
+//                anchors.leftMargin: 0
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
+
+                width: 300
+
+                anchors.top: welcom.bottom
+                anchors.topMargin: 2
                 color: "#191c28"
                 radius: 25
                 border.width: 3
@@ -96,18 +105,18 @@ Item {
 
             Text {
                 id: welcome2
-                anchors.right: logoNIC.left
+                anchors.right: parent.left
                 anchors.rightMargin: 0
                 anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.bottom: parent.bottom
+                anchors.topMargin: 15
+                anchors.bottom: rlogoUNI.top
                 anchors.bottomMargin: 0
-                anchors.left: logoUNI.right
+                anchors.left: parent.right
                 anchors.leftMargin: 0
                 width: 629
                 height: 91
                 color: "#fbfbfb"
-                text: "Bienvenidos al laboratorio Virtual \n de Robótica Industrial"
+                text: "Bienvenidos al laboratorio Virtual de Robótica Industrial"
                 opacity: 1
                 horizontalAlignment: Text.AlignHCenter
                 font.family: textFont.name
@@ -119,22 +128,23 @@ Item {
 
             Item {
                 id: logoUNI
-                width: 394
+                width: 581
                 height: 101
                 anchors.left: parent.left
                 anchors.leftMargin: 9
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 3
+                anchors.bottomMargin: 8
+                anchors.top: welcom.bottom
+                anchors.topMargin: 2
                 clip: false
                 transformOrigin: Item.Center
 
 
                 Image {
                     id: image2
+                    y: 2
                     anchors.left: parent.left
-                    anchors.leftMargin: 6
+                    anchors.leftMargin: 14
                     width: 133
                     height: 88
                     fillMode: Image.PreserveAspectFit
@@ -144,8 +154,8 @@ Item {
 
                 Text {
                     id: txtSystem15
-                    x: 147
-                    y: 8
+                    x: 153
+                    y: 2
                     width: 240
                     height: 35
                     color: "#ffffff"
@@ -159,9 +169,9 @@ Item {
 
                 Text {
                     id: txtSystem2
-                    x: 151
-                    y: 59
-                    width: 236
+                    x: 188
+                    y: 47
+                    width: 170
                     height: 34
                     color: "#ffffff"
                     text: qsTr("Ingeniería Electrónica\nFacultad de electrotecnia y computación")
@@ -179,8 +189,8 @@ Item {
                 anchors.rightMargin: 3
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
+                anchors.top: welcom.bottom
+                anchors.topMargin: 2
                 width: 307
                 height: 101
                 transformOrigin: Item.Center
@@ -411,7 +421,7 @@ Item {
             id:rowM //Row Master
             spacing: 20
             anchors.top: banner.bottom
-            anchors.topMargin: 100
+            anchors.topMargin: 110
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 300
             anchors.left: parent.left
@@ -732,7 +742,7 @@ Item {
                   }
 
             Text {
-                text: "ABOUT"
+                text: "Autor"
                 font.pointSize: 10
                 font.bold: true
                 color: "#FFFFFF"
@@ -770,7 +780,7 @@ Item {
                   }
 
             Text {
-                text: "Main LAB"
+                text: "Ir a LAB"
                 font.pointSize: 10
                 font.bold: true
                 color: "#FFFFFF"

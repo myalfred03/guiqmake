@@ -53,11 +53,13 @@ OBJECTS_DIR   = ./
 SOURCES       = ../LabGUI/main.cpp \
 		../LabGUI/launcher.cpp qrc_qml.cpp \
 		qrc_pdf.cpp \
+		qrc_videos.cpp \
 		moc_launcher.cpp
 OBJECTS       = main.o \
 		launcher.o \
 		qrc_qml.o \
 		qrc_pdf.o \
+		qrc_videos.o \
 		moc_launcher.o
 DIST          = ../LabGUI/index.html \
 		../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -249,7 +251,7 @@ TARGET        = LabGUI
 first: all
 ####### Build rules
 
-$(TARGET): 3rdParty pdf modelos WebResources $(OBJECTS)  
+$(TARGET): 3rdParty pdf modelos WebResources video $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/qmake.conf ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -434,6 +436,7 @@ Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/q
 		../LabGUI/LabGUI.pro \
 		../LabGUI/qml.qrc \
 		../LabGUI/pdf.qrc \
+		../LabGUI/videos.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5QuickControls2.prl \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngine.prl \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngineCore.prl \
@@ -629,6 +632,7 @@ Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/q
 ../LabGUI/LabGUI.pro:
 ../LabGUI/qml.qrc:
 ../LabGUI/pdf.qrc:
+../LabGUI/videos.qrc:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5QuickControls2.prl:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngine.prl:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngineCore.prl:
@@ -655,8 +659,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../LabGUI/3rdParty ../LabGUI/pdf ../LabGUI/modelos ../LabGUI/WebResources $(DISTDIR)/
-	$(COPY_FILE) --parents ../LabGUI/qml.qrc ../LabGUI/pdf.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../LabGUI/3rdParty ../LabGUI/pdf ../LabGUI/modelos ../LabGUI/WebResources ../LabGUI/video $(DISTDIR)/
+	$(COPY_FILE) --parents ../LabGUI/qml.qrc ../LabGUI/pdf.qrc ../LabGUI/videos.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/launcher.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/main.cpp ../LabGUI/launcher.cpp $(DISTDIR)/
@@ -682,9 +686,9 @@ check: first
 
 benchmark: first
 
-compiler_copy_cmd_make_all: 3rdParty pdf modelos WebResources
+compiler_copy_cmd_make_all: 3rdParty pdf modelos WebResources video
 compiler_copy_cmd_clean:
-	-$(DEL_FILE) 3rdParty pdf modelos WebResources
+	-$(DEL_FILE) 3rdParty pdf modelos WebResources video
 3rdParty: ../LabGUI/3rdParty
 	cp -f -R ../LabGUI/3rdParty 3rdParty
 
@@ -697,9 +701,12 @@ modelos: ../LabGUI/modelos
 WebResources: ../LabGUI/WebResources
 	cp -f -R ../LabGUI/WebResources WebResources
 
-compiler_rcc_make_all: qrc_qml.cpp qrc_pdf.cpp
+video: ../LabGUI/video
+	cp -f -R ../LabGUI/video video
+
+compiler_rcc_make_all: qrc_qml.cpp qrc_pdf.cpp qrc_videos.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_qml.cpp qrc_pdf.cpp
+	-$(DEL_FILE) qrc_qml.cpp qrc_pdf.cpp qrc_videos.cpp
 qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc \
 		../LabGUI/launcher.cpp \
@@ -730,8 +737,29 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/qml/Main/MRmodel.qml \
 		../LabGUI/qml/Main/StackViewCommonTransition.qml \
 		../LabGUI/qml/Main/FirstSCmenu.qml \
+		../LabGUI/qml/Main/MRmorfo.qml \
 		../LabGUI/qml/Main/MRkine.qml \
 		../LabGUI/qml/Main/MRsimu.qml \
+		../LabGUI/qml/Main/Morfo/ScreenMorfoExample.qml \
+		../LabGUI/qml/Main/Morfo/ScreenMorfoTheoryR.qml \
+		../LabGUI/qml/Main/Morfo/StackViewCommonTransition.qml \
+		../LabGUI/qml/Main/Morfo/ScreenMorfoInfo.qml \
+		../LabGUI/qml/Main/Morfo/ScreenMorfoURDF.qml \
+		../LabGUI/qml/Main/Morfo/ScreenMorfoModelando.qml \
+		../LabGUI/qml/Main/Morfo/Content/URDFJoint.qml \
+		../LabGUI/qml/Main/Morfo/Content/ExModelInd2.qml \
+		../LabGUI/qml/Main/Morfo/Content/ThEsl.qml \
+		../LabGUI/qml/Main/Morfo/Content/URDFDynam.qml \
+		../LabGUI/qml/Main/Morfo/Content/ExModel2.qml \
+		../LabGUI/qml/Main/Morfo/Content/ExModelInd1.qml \
+		../LabGUI/qml/Main/Morfo/Content/URDFDetails.qml \
+		../LabGUI/qml/Main/Morfo/Content/URDFEsla.qml \
+		../LabGUI/qml/Main/Morfo/Content/ThUn.qml \
+		../LabGUI/qml/Main/Morfo/Content/ExModel1.qml \
+		../LabGUI/qml/Main/Morfo/Content/Info2.qml \
+		../LabGUI/qml/Main/Morfo/Content/Info1.qml \
+		../LabGUI/qml/Main/Morfo/Content/ThDynam.qml \
+		../LabGUI/qml/Main/Morfo/Content/ThKinem.qml \
 		../LabGUI/qml/Main/Simu/ScreenSimuScriptExample.qml \
 		../LabGUI/qml/Main/Simu/ScreenSimuSimulando.qml \
 		../LabGUI/qml/Main/Simu/ScreenSimuInfo.qml \
@@ -1212,6 +1240,11 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/img/industrial-robot.png \
 		../LabGUI/img/background02.png \
 		../LabGUI/img/UNI-icon.png \
+		../LabGUI/img/player/stop.png \
+		../LabGUI/img/player/play.png \
+		../LabGUI/img/player/forward.png \
+		../LabGUI/img/player/backward.png \
+		../LabGUI/img/player/pause.png \
 		../LabGUI/img/mainLab/menu.png \
 		../LabGUI/img/mainLab/drawer.png \
 		../LabGUI/img/dialogsWel/Barrientos.png \
@@ -1702,6 +1735,10 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 qrc_pdf.cpp: ../LabGUI/pdf.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc
 	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name pdf ../LabGUI/pdf.qrc -o qrc_pdf.cpp
+
+qrc_videos.cpp: ../LabGUI/videos.qrc \
+		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc
+	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name videos ../LabGUI/videos.qrc -o qrc_videos.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
@@ -2214,6 +2251,9 @@ qrc_qml.o: qrc_qml.cpp
 
 qrc_pdf.o: qrc_pdf.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_pdf.o qrc_pdf.cpp
+
+qrc_videos.o: qrc_videos.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_videos.o qrc_videos.cpp
 
 moc_launcher.o: moc_launcher.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_launcher.o moc_launcher.cpp
