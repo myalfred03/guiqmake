@@ -17,6 +17,7 @@ private:
     QProcess *m_process;
     QProcess *m_process2;
 
+
 };
 
 #endif // LAUNCHER_H
