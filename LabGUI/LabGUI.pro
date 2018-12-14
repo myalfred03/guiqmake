@@ -11,8 +11,7 @@ HEADERS += launcher.h
 
 
 RESOURCES += qml.qrc \
-    pdf.qrc \
-    videos.qrc
+
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

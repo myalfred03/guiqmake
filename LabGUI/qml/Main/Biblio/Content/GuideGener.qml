@@ -45,19 +45,18 @@ Flickable{
 
             Text{
                 width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
+                text: "Concepto de Robot "
+                wrapMode: Text.Wrap
+                font.pointSize: 24
+                color: "black"
+                horizontalAlignment: Text.AlignJustify
+                }
+
+            Text{
+                width: parent.width
+                text: "Robot (RIA): Un robot industrial es un manipulador multifuncional reprogramable,"+
+                      "capaz de mover materias, piezas, herramientas o dispositivos especiales, según trayectorias"+
+                      "variables, programadas para realizar tareas diversas."
                 wrapMode: Text.Wrap
                 font.pointSize: 20
                 color: "black"
@@ -66,45 +65,27 @@ Flickable{
 
             Text{
                 width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
+                text: "Concepto de Robot Industrial "
                 wrapMode: Text.Wrap
-                font.pointSize: 20
+                font.pointSize: 24
                 color: "black"
                 horizontalAlignment: Text.AlignJustify
                 }
 
             Text{
                 width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
+                text: "Robot manipulador industrial (ISO): Manipulador de 3 o más ejes, con control "+
+            "automático, reprogramable, multiaplicación, móvil o no, destinado a ser utilizado en aplicaciones"+
+            "de automatización industrial. Incluye al manipulador (sistema mecánico y accionadores) y al"+
+            "sistema de control (software y hardware de control y potencia)"
                 wrapMode: Text.Wrap
                 font.pointSize: 20
                 color: "black"
                 horizontalAlignment: Text.AlignJustify
                 }
+
+
+
 
 
             }

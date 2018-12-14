@@ -42,7 +42,7 @@ import QtQuick.Controls.Material 2.0
 
         MediaPlayer {
             id: player
-            source: urlv2
+            source: urlv1
             autoPlay: true
             /* playbackState:
               0 - stopped

@@ -68,7 +68,7 @@ Dialog {
                     id: logo2
                     // width: parent.width / 2
                     //anchors.horizontalCenter: parent.horizontalCenter
-                    source: "qrc:/img/dialogsWel/NewmanROS.png"
+                    source: "qrc:/img/dialogsWel/Craig.png"
                     sourceSize.width: 100
                     sourceSize.height: 100
                     fillMode: Image.PreserveAspectCrop
@@ -76,26 +76,9 @@ Dialog {
                       }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "<p>Dentro del laboratorio se acceder&aacute;n a recursos bibliogr&aacute;ficos de importancia para el desarrollo y consolidaci&oacute;n de los conceptos b&aacute;sicos de la rob&oacute;tica industrial.</p>"
                 wrapMode: Label.Wrap
+                textFormat: Text.RichText
                 }
 
             Image {
@@ -103,30 +86,14 @@ Dialog {
                 width: parent.width / 2
                 anchors.horizontalCenter: parent.horizontalCenter
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/img/dialogsWel/Craig.png"
+                source: "qrc:/img/dialogsWel/Barrientos.png"
                 }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "<p>Es un libro que va dirigido tanto para los alumnos de ingenier&iacute;a y ciencias como para todo profesional que necesite conocer qu&eacute; es un robot, c&oacute;mo funciona y c&oacute;mo debe utilizarlo, retomando dentro de este libro parte de las cuatro secciones que compone el laboratorio virtaual de Rob&oacute;tica industrial, Morfolog&iacute;a del robot, Herramientas matem&aacute;ticas del Robot, Cinem&aacute;tica del robot, Programaci&oacute;n del robot.</p>"
                 wrapMode: Label.Wrap
+                textFormat: Text.RichText
+
                 }
 
                      }

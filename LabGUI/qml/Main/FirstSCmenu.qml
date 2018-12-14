@@ -33,67 +33,40 @@ Flickable {
 
             Text{
                 width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
+                text: "Bienvenidos al laboratorio virtual de Robotica Industrial"
+
                 wrapMode: Text.Wrap
                 font.pointSize: 24
                 color: "white"
                 horizontalAlignment: Text.AlignJustify
                 }
+
+            Image {
+                id: image2
+                width: 200
+                height: 200
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/img/industrial-robot.png"
+                  }
 
             Text{
                 width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
-                wrapMode: Text.Wrap
-                font.pointSize: 24
-                color: "white"
-                horizontalAlignment: Text.AlignJustify
-                }
-
-            Text{
-                width: parent.width
-                text: "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "So GnarNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "Sonar GNU/Linux has three different options for managing "+
-                   "packages. The original command line option, Pacman "+
-                   "and two different GUI options, Octopi or Pamac."
+                text: "Este Laboratorio usa Recursos de Software de ROS (Robot operating System)"
 
                 wrapMode: Text.Wrap
                 font.pointSize: 24
                 color: "white"
                 horizontalAlignment: Text.AlignJustify
                 }
+
+            Image {
+                id: image1
+                width: 200
+                height: 200
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/img/ROS_INDUSTRIAL.png"
+                  }
+
 
             CheckBox {
                 text: qsTr("E-mail")
@@ -108,7 +81,7 @@ Flickable {
                      }
 
             Image {
-                id: image2
+                id: image
                 width: 133
                 height: 88
                 fillMode: Image.PreserveAspectFit

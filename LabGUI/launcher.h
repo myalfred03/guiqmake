@@ -12,10 +12,14 @@ public:
 
     Q_INVOKABLE void launch();
     Q_INVOKABLE void launch2();
+    Q_INVOKABLE void launch3();
+
 
 private:
-    QProcess *m_process;
-    QProcess *m_process2;
+    QProcess *process_rvizglabre;
+    QProcess *process_robot_editor;
+    QProcess *process_interpreter_xyz;
+    QProcess *process_interpreter_gui;
 
 
 };

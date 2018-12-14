@@ -38,57 +38,29 @@ Dialog {
             Image {
                 //width: parent.width / 2
                 anchors.horizontalCenter: parent.horizontalCenter
-                source: "qrc:/img/dialogsWel/guide.png"
-                sourceSize.width: 50
-                sourceSize.height: 50
+                source: "qrc:/img/model.png"
+                sourceSize.width: 350
+                sourceSize.height: 350
                 fillMode: Image.PreserveAspectCrop
                 }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "La resolución del problema cinemático directo permite conocer cuál es la posición y "
+                +"orientación que adopta el extremo del robot cuando cada una de las variables que fijan la posición"
+                +"u orientación de sus articulaciones toma valores determinados."
+                +"Dado que son las variables articulares las que pueden ser leídas directamente de los"
+                +"correspondientes sensores por la unidad de control del robot, el modelo cinemático directo será"
+                +"utilizado por éste, entre otros fines, para presentar al usuario información relativa a la"
+                +"localización del extremo del robot."
                 wrapMode: Label.Wrap
                 }
-
-            Label {
-                width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                wrapMode: Label.Wrap
+            Image {
+                //width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "qrc:/img/kinemdegree.png"
+                sourceSize.width: 350
+                sourceSize.height: 350
+                fillMode: Image.PreserveAspectCrop
                 }
 
                      }

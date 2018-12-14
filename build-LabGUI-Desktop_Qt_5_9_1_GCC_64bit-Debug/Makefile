@@ -52,14 +52,10 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../LabGUI/main.cpp \
 		../LabGUI/launcher.cpp qrc_qml.cpp \
-		qrc_pdf.cpp \
-		qrc_videos.cpp \
 		moc_launcher.cpp
 OBJECTS       = main.o \
 		launcher.o \
 		qrc_qml.o \
-		qrc_pdf.o \
-		qrc_videos.o \
 		moc_launcher.o
 DIST          = ../LabGUI/index.html \
 		../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -435,8 +431,6 @@ Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/q
 		../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/lex.prf \
 		../LabGUI/LabGUI.pro \
 		../LabGUI/qml.qrc \
-		../LabGUI/pdf.qrc \
-		../LabGUI/videos.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5QuickControls2.prl \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngine.prl \
 		../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngineCore.prl \
@@ -631,8 +625,6 @@ Makefile: ../LabGUI/LabGUI.pro ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/linux-g++/q
 ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/lex.prf:
 ../LabGUI/LabGUI.pro:
 ../LabGUI/qml.qrc:
-../LabGUI/pdf.qrc:
-../LabGUI/videos.qrc:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5QuickControls2.prl:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngine.prl:
 ../../../Qt5.9.1/5.9.1/gcc_64/lib/libQt5WebEngineCore.prl:
@@ -660,7 +652,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/3rdParty ../LabGUI/pdf ../LabGUI/modelos ../LabGUI/WebResources ../LabGUI/video $(DISTDIR)/
-	$(COPY_FILE) --parents ../LabGUI/qml.qrc ../LabGUI/pdf.qrc ../LabGUI/videos.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../LabGUI/qml.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt5.9.1/5.9.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/launcher.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../LabGUI/main.cpp ../LabGUI/launcher.cpp $(DISTDIR)/
@@ -704,9 +696,9 @@ WebResources: ../LabGUI/WebResources
 video: ../LabGUI/video
 	cp -f -R ../LabGUI/video video
 
-compiler_rcc_make_all: qrc_qml.cpp qrc_pdf.cpp qrc_videos.cpp
+compiler_rcc_make_all: qrc_qml.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_qml.cpp qrc_pdf.cpp qrc_videos.cpp
+	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc \
 		../LabGUI/launcher.cpp \
@@ -844,418 +836,59 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/qml/Main/Model/Content/Info1.qml \
 		../LabGUI/qml/Main/Model/Content/ThDynam.qml \
 		../LabGUI/qml/Main/Model/Content/ThKinem.qml \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/LICENSE \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/compatibility.js \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/l10n.js \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/viewer.css \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/debugger.js \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/viewer.js \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/viewer.html \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/compressed.tracemonkey-pldi-09.pdf \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-5.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UCS2-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISX02132004-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UCS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISX02132004-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBTpc-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBTpc-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISX0213-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90ms-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISX0213-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90ms-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Ext-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Ext-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-1.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-UCS2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCms-UHC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UCS2-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-1.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCms-UHC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UCS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Korea1-0.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/83pv-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-5.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF8-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETHK-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF16-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETHK-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GB-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF16-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-4.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF16-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Add-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GB-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UTF16-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Add-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKgccs-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-4.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKgccs-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF16-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-1.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF16-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKdlb-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKdlb-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Katakana.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-Johab-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSC-Johab-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBK-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF16-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBKp-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBK-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF16-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-0.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBKp-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/B5pc-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/B5pc-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-0.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GB-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GB-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-4.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF8-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISPro-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Korea1-UCS2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-3.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETen-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Hiragana.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UCS2-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniGB-UCS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UCS2-HW-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETen-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-3.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UCS2-HW-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90pv-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Korea1-2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90pv-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/LICENSE \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-0.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Ext-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Ext-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF8-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF8-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS2004-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniCNS-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISPro-UCS2-HW-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78ms-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKm314-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKm471-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78ms-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKm314-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKm471-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKscs-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKscs-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/WP-Symbol.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/NWP-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS1-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-6.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBK2K-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/NWP-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS1-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBK2K-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Hankaku.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-3.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-UCS2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF8-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJIS-UTF8-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/78-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCms-UHC-HW-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCms-UHC-HW-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UCS2-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniJISPro-UCS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UCS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Add-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Japan1-2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Add-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-Korea1-1.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBpc-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF32-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90msp-RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBpc-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-6.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF16-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF32-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/90msp-RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBT-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/UniKS-UTF16-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/RKSJ-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBT-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/RKSJ-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCpc-EUC-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBT-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/KSCpc-EUC-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/GBT-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETenms-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKdla-B5-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Roman.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/ETenms-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/HKdla-B5-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-GB1-5.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS2-H.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/Adobe-CNS1-UCS2.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/cmaps/CNS2-V.bcmap \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-previous@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageDown.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-documentProperties.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-previous-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-collapsed.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-presentationMode.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-download@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageUp@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-sidebarToggle@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-expanded.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-noicon.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-rotateCw@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-menuArrows.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-zoomIn.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-key.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-openFile.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageDown@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-search@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewOutline@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-sidebarToggle.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-collapsed-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-collapsed@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-rotateCcw.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-previous-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-secondaryToolbarToggle@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-zoomOut@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-expanded@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageUp.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewAttachments.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-rotateCw.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageUp-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-next.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-bookmark@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/loading-small@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-paragraph.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-lastPage@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-lastPage.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-openFile@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-menuArrows@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageDown-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewOutline-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-sidebarToggle-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-next-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-rotateCcw@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageUp-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-bookmark.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-download.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-search.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-secondaryToolbarToggle.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-comment.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-check.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-print.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/loading-small.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewAttachments@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-handTool@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/grabbing.cur \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-presentationMode@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-newparagraph.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-previous.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-note.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/texture.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/loading-icon.gif \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-pageDown-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-zoomIn@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-print@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/grab.cur \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-handTool.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewOutline-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewOutline.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-zoomOut.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-firstPage.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-insert.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-sidebarToggle-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/treeitem-collapsed-rtl.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-next@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/annotation-help.svg \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-firstPage@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewThumbnail@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/secondaryToolbarButton-documentProperties@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/toolbarButton-viewThumbnail.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/findbarButton-next-rtl@2x.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/images/shadow.png \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/locale.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ta-LK/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/bg/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/be/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/fi/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/hy-AM/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/lij/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ff/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/bn-BD/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/en-ZA/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/rw/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/az/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/fa/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ru/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/nl/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/en-US/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/as/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ro/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ar/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ja/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/rm/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ach/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/an/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/eu/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/et/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ak/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/zu/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/eo/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/son/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/af/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/it/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/vi/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/el/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/is/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/my/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/pt-PT/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ast/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ms/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/mr/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/bn-IN/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/mn/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ml/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/id/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/mk/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/es-CL/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ur/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/zh-TW/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/uk/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/hu/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/hr/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sv-SE/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/lv/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/fy-NL/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/lt/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/de/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/zh-CN/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/gu-IN/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/da/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/en-GB/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/pt-BR/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/he/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sah/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/mai/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/cy/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/lg/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/pl/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/tr/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/cs/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/tn/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/tl/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/th/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/hi-IN/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/te/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/nb-NO/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/csb/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ku/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/gl/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/xh/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ta/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/pa-IN/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/nn-NO/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ca/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ko/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/es-AR/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/kn/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/km/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/or/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/gd/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/kk/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sw/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/es-ES/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ga-IE/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sr/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sq/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/bs/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/ka/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/br/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/es-MX/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sl/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/sk/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/oc/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/si/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/wo/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/nso/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/web/locale/fr/viewer.properties \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/build/pdf.worker.js \
-		../LabGUI/3rdParty/pdfjs-1.7.225-dist/build/pdf.js \
+		../LabGUI/img/ni.jpg \
+		../LabGUI/img/arbolrobot.png \
+		../LabGUI/img/backgroundblue.png \
+		../LabGUI/img/modelURDF.png \
+		../LabGUI/img/welcome.png \
+		../LabGUI/img/step3.png \
+		../LabGUI/img/model.png \
+		../LabGUI/img/UNI-LOGOa.png \
+		../LabGUI/img/books.png \
+		../LabGUI/img/bookPc100x.png \
+		../LabGUI/img/background1green.png \
+		../LabGUI/img/Mainlab.png \
+		../LabGUI/img/step2.png \
+		../LabGUI/img/gif3.gif \
+		../LabGUI/img/ROS_INDUSTRIAL.png \
+		../LabGUI/img/about.png \
+		../LabGUI/img/Cinemat.png \
+		../LabGUI/img/step1.png \
+		../LabGUI/img/background02.png \
+		../LabGUI/img/robot-arm100x.png \
+		../LabGUI/img/UNI-icon.png \
 		../LabGUI/img/NIC.jpg \
 		../LabGUI/img/Kinema.png \
-		../LabGUI/img/gif3.gif \
-		../LabGUI/img/backgroundblue.png \
-		../LabGUI/img/Simu100x.png \
-		../LabGUI/img/UNI-LOGOa.png \
-		../LabGUI/img/modelURDF.png \
-		../LabGUI/img/ni.jpg \
-		../LabGUI/img/Mainlab.png \
-		../LabGUI/img/Cinemat.png \
-		../LabGUI/img/welcome.png \
-		../LabGUI/img/model.png \
-		../LabGUI/img/step1.png \
-		../LabGUI/img/jointIcon.png \
-		../LabGUI/img/robot-arm100x.png \
-		../LabGUI/img/bookPc.png \
-		../LabGUI/img/bookPc100x.png \
-		../LabGUI/img/step2.png \
-		../LabGUI/img/model100x.png \
-		../LabGUI/img/about.png \
-		../LabGUI/img/step3.png \
 		../LabGUI/img/Kinem.png \
 		../LabGUI/img/bookPc55x.png \
+		../LabGUI/img/Simu100x.png \
 		../LabGUI/img/arrow.png \
-		../LabGUI/img/background1green.png \
+		../LabGUI/img/bookPc.png \
+		../LabGUI/img/kinemdegree.png \
+		../LabGUI/img/jointIcon.png \
 		../LabGUI/img/industrial-robot.png \
-		../LabGUI/img/background02.png \
-		../LabGUI/img/UNI-icon.png \
+		../LabGUI/img/FEC.png \
+		../LabGUI/img/model100x.png \
+		../LabGUI/img/dialogsWel/Barrientos.png \
+		../LabGUI/img/dialogsWel/ToR.png \
+		../LabGUI/img/dialogsWel/guide.png \
+		../LabGUI/img/dialogsWel/simulgz.png \
+		../LabGUI/img/dialogsWel/bookabc.png \
+		../LabGUI/img/dialogsWel/simul.png \
+		../LabGUI/img/dialogsWel/NewmanROS.png \
+		../LabGUI/img/dialogsWel/books.png \
+		../LabGUI/img/dialogsWel/Craig.png \
+		../LabGUI/img/mainLab/menu.png \
+		../LabGUI/img/mainLab/drawer.png \
+		../LabGUI/img/developer/YE.jpg \
 		../LabGUI/img/player/stop.png \
 		../LabGUI/img/player/play.png \
 		../LabGUI/img/player/forward.png \
 		../LabGUI/img/player/backward.png \
 		../LabGUI/img/player/pause.png \
-		../LabGUI/img/mainLab/menu.png \
-		../LabGUI/img/mainLab/drawer.png \
-		../LabGUI/img/dialogsWel/Barrientos.png \
-		../LabGUI/img/dialogsWel/ToR.png \
-		../LabGUI/img/dialogsWel/guide.png \
-		../LabGUI/img/dialogsWel/simulgz.png \
-		../LabGUI/img/dialogsWel/simul.png \
-		../LabGUI/img/dialogsWel/NewmanROS.png \
-		../LabGUI/img/dialogsWel/books.png \
-		../LabGUI/img/dialogsWel/Craig.png \
-		../LabGUI/img/developer/YE.jpg \
+		../LabGUI/img/loading/Ellipsis-2.2s-150px.gif \
+		../LabGUI/img/loading/ROSGUI_183.png \
+		../LabGUI/img/loading/ROSGUI_182.png \
 		../LabGUI/launcher.h \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/QObject \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/qobject.h \
@@ -1731,14 +1364,6 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtWebEngine/qtwebengineglobal.h \
 		../../../Qt5.9.1/5.9.1/gcc_64/include/QtCore/QDir
 	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name qml ../LabGUI/qml.qrc -o qrc_qml.cpp
-
-qrc_pdf.cpp: ../LabGUI/pdf.qrc \
-		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc
-	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name pdf ../LabGUI/pdf.qrc -o qrc_pdf.cpp
-
-qrc_videos.cpp: ../LabGUI/videos.qrc \
-		../../../Qt5.9.1/5.9.1/gcc_64/bin/rcc
-	/home/yesser/Qt5.9.1/5.9.1/gcc_64/bin/rcc -name videos ../LabGUI/videos.qrc -o qrc_videos.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
@@ -2248,12 +1873,6 @@ launcher.o: ../LabGUI/launcher.cpp ../LabGUI/launcher.h \
 
 qrc_qml.o: qrc_qml.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_qml.o qrc_qml.cpp
-
-qrc_pdf.o: qrc_pdf.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_pdf.o qrc_pdf.cpp
-
-qrc_videos.o: qrc_videos.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_videos.o qrc_videos.cpp
 
 moc_launcher.o: moc_launcher.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_launcher.o moc_launcher.cpp

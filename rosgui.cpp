@@ -26,16 +26,16 @@ ROSGUI::ROSGUI(QWidget *parent) :
         connect(ui->pitchBox, SIGNAL(valueChanged(double)), SLOT(updateSlider()));
         connect(ui->yawBox, SIGNAL(valueChanged(double)), SLOT(updateSlider()));
 
-        connect(ui->checkBox2DOFs, SIGNAL(toggled(bool)), SLOT(on_2DOF()));
-        connect(ui->checkBox2DOFI, SIGNAL(toggled(bool)), SLOT(on_2DOF()));
-        connect(ui->checkBox3DOFs, SIGNAL(toggled(bool)), SLOT(on_3DOF()));
-        connect(ui->checkBox3DOFI, SIGNAL(toggled(bool)), SLOT(on_3DOF()));
-        connect(ui->checkBox4DOFs, SIGNAL(toggled(bool)), SLOT(on_4DOF()));
-        connect(ui->checkBox4DOFI, SIGNAL(toggled(bool)), SLOT(on_4DOF()));
-        connect(ui->checkBox5DOFs, SIGNAL(toggled(bool)), SLOT(on_5DOF()));
-        connect(ui->checkBox5DOFI, SIGNAL(toggled(bool)), SLOT(on_5DOF()));
-        connect(ui->checkBox6DOFs, SIGNAL(toggled(bool)), SLOT(on_6DOF()));
-        connect(ui->checkBox6DOFI, SIGNAL(toggled(bool)), SLOT(on_6DOF()));
+        //        connect(ui->checkBox2DOFs, SIGNAL(toggled(bool)), SLOT(on_2DOF()));
+        //        connect(ui->checkBox2DOFI, SIGNAL(toggled(bool)), SLOT(on_2DOF()));
+        //        connect(ui->checkBox3DOFs, SIGNAL(toggled(bool)), SLOT(on_3DOF()));
+        //        connect(ui->checkBox3DOFI, SIGNAL(toggled(bool)), SLOT(on_3DOF()));
+        //        connect(ui->checkBox4DOFs, SIGNAL(toggled(bool)), SLOT(on_4DOF()));
+        //        connect(ui->checkBox4DOFI, SIGNAL(toggled(bool)), SLOT(on_4DOF()));
+        //        connect(ui->checkBox5DOFs, SIGNAL(toggled(bool)), SLOT(on_5DOF()));
+        //        connect(ui->checkBox5DOFI, SIGNAL(toggled(bool)), SLOT(on_5DOF()));
+        //        connect(ui->checkBox6DOFs, SIGNAL(toggled(bool)), SLOT(on_6DOF()));
+        //        connect(ui->checkBox6DOFI, SIGNAL(toggled(bool)), SLOT(on_6DOF()));
 
 
 

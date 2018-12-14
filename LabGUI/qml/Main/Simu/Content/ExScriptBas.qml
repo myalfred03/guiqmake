@@ -29,7 +29,7 @@ Flickable{
 //        Material.accent: Material.Green
 //        Material.theme: Material.Dark
 
-        Column {
+        ColumnLayout {
             id: column
             anchors.fill: parent
             spacing: 10

@@ -5,13 +5,25 @@ import QtQuick.Controls.Material 2.0
 Pane {
     ColumnLayout {
              anchors.fill: parent
+             Image {
+                 id: image
+//                 width: 100
+//                 height: 100
+////                 fillMode: Image.PreserveAspectFit
+                 anchors.horizontalCenter: parent.horizontalCenter
+                 sourceSize.width: 600
+                 sourceSize.height: 500
+                 fillMode: Image.PreserveAspectCrop
+                 source: "qrc:/img/loading/ROSGUI_183.png"
+                   }
+
              AnimatedImage {
                  id: image2
                  anchors.horizontalCenter: parent.horizontalCenter
-//                 width: 200
-//                 height: 200
-//                 fillMode: Image.PreserveAspectFit
-                 source: "qrc:/img/gif3.gif"
+                  width: 100
+                  height: 100
+                 fillMode: Image.PreserveAspectCrop
+                 source: "qrc:/img/loading/Ellipsis-2.2s-150px.gif"
 
                    }
 

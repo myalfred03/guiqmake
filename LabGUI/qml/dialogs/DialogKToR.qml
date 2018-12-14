@@ -45,25 +45,11 @@ Dialog {
                 }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "La cinemática del robot estudia el movimiento de este con respecto a un sistema de"
+                  + "referencia sin considerar las fuerzas que intervienen. Así, la cinemática se interesa"
+                  + "por la descripción analítica del movimiento espacial del robot como una función del"
+                  + "tiempo, y en particular por las relaciones entre la posición y la orientación del extremo"
+                  +" final del robot con los valores que toman sus coordenadas articulares."
                 wrapMode: Label.Wrap
                 horizontalAlignment: Text.AlignJustify
 
@@ -71,25 +57,18 @@ Dialog {
 
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "El laboratorio virtual de robótica que se propone cuenta con recursos que permitirán"
+               + "al estudiante realizar experimentos sencillos que le ayudarán a comprender las"
+               + "características de la cinemática directa e inversa."
+               + " A partir del modelo de un robot, construido utilizando el formato URDF, es posible"
+               + " obtener toda la información necesaria de la estructura de este utilizando la librería"
+               + " KDL. La información obtenida al utilizar el KDL en combinación con la información"
+               + " suministrada por el usuario (por ejemplo, los ángulos de los joints) mediante ciertos"
+               + " widgets de la GUI permiten manipular y/o determinar la posición del robot."
+               + " La librería KDL también puede ser utilizada para determinar la matriz de"
+               + "transformación homogénea la cual es utilizada para determinar la posición y rotación"
+               + " del efector final del robot. Los datos obtenidos serán visualizados mediante widgets"
+               + "del GUI desarrollados para la representación de datos."
                 wrapMode: Label.Wrap
                 }
 

@@ -45,50 +45,23 @@ Dialog {
                 }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "<p>Para facilitar el uso del <strong>laboratorio virtual</strong> se ha elaborado un manual de uso del laboratorio en el cual se presentaran todas las funcionalidades con las que cuenta este mismo, contara con diferentes pruebas de ejemplo para verificar la efectividad de los recursos del laboratorio virtual y una mini gui&aacute; de uso base del <strong>Sistema operativo para Robots (ROS)</strong> para aquel estudiante o acad&eacute;mico interesado en seguir la investigaciones del uso de este sistema.</p>"
                 wrapMode: Label.Wrap
+                textFormat: Text.RichText
                 }
 
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "ABC de ROS"
                 wrapMode: Label.Wrap
+                }
+            Image {
+                //width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "qrc:/img/dialogsWel/bookabc.png"
+                sourceSize.width: 50
+                sourceSize.height: 50
+                fillMode: Image.PreserveAspectCrop
                 }
 
                      }

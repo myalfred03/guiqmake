@@ -93,6 +93,7 @@ Pane {
             anchors.top:simuInfo.bottom
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Simu/ScreenSimuSimulando.qml")
+                launcher.launch3()
                        }
             ButtonGroup.group: menuButtons
                     }

@@ -45,56 +45,13 @@ Dialog {
                 fillMode: Image.PreserveAspectCrop
                   }
 
-            RowLayout{
-                spacing: 10
-                anchors.left:dialogRBook.left
-                anchors.right: dialogRBook.right
-                anchors.horizontalCenter: parent.horizontalCenter
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.maximumHeight: 100
-                Layout.maximumWidth: 100
-
-                Image {
-                    id: logo
-                    //width: parent.width / 2
-                    //anchors.horizontalCenter: parent.horizontalCenter
-                    source: "qrc:/img/dialogsWel/Barrientos.png"
-                    sourceSize.width: 90
-                    sourceSize.height: 90
-                    fillMode: Image.PreserveAspectCrop
-                    }
-                Image {
-                    id: logo2
-                    // width: parent.width / 2
-                    //anchors.horizontalCenter: parent.horizontalCenter
-                    source: "qrc:/img/dialogsWel/NewmanROS.png"
-                    sourceSize.width: 100
-                    sourceSize.height: 100
-                    fillMode: Image.PreserveAspectCrop
-                    }
-                      }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "El formato empleado para el modelo del brazo está denominado por el acrónimo inglés URDF"
+                 +" (Unified Robot Description Format), que emplea el lenguaje xml. Consiste en un árbol de"
+                 +"elementos geométricos (links) conectados entre sí mediante uniones (joints) que determinan"
+                 +"el parentesco entre ellos. Estas uniones pueden ser fijas o móviles, las móviles pueden"
+                 +"ser a su vez rotacionales, lineales o flotantes. "
                 wrapMode: Label.Wrap
                 }
 
@@ -103,29 +60,15 @@ Dialog {
                 width: parent.width / 2
                 anchors.horizontalCenter: parent.horizontalCenter
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/img/dialogsWel/Craig.png"
+                source: "qrc:/img/arbolrobot.png"
                 }
             Label {
                 width: parent.width
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus "
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
-                  + "in est quis laoreet. Interdum et malesuada fames ac ante ipsum primis "
-                  + "in faucibus. Curabitur eget justo sollicitudin enim faucibus bibendum. "
-                  + "Suspendisse potenti. Vestibulum cursus consequat mauris id sollicitudin. "
-                  + "Duis facilisis hendrerit consectetur. Curabitur sapien tortor, efficitur "
-                  + "id auctor nec, efficitur et nisl. Ut venenatis eros in nunc placerat, "
-                  + "eu aliquam enim suscipit."
+                text: "URDF permite armar el robot utilizando un modelo de arbol "
+                  + "Como el mostrado anteriormente en la imagen"
+                      + "Se puede modelar un robot industrial, robot movil o un robot humanoide"
+
+
                 wrapMode: Label.Wrap
                 }
 

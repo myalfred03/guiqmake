@@ -13,7 +13,7 @@ Pane {
             when: tabBar.currentIndex==0
             PropertyChanges {
                 target: webView
-                url: urlcraig
+                url: urlcv
             }
         },
         State {
@@ -21,7 +21,7 @@ Pane {
             when: tabBar.currentIndex==1
             PropertyChanges {
                 target: webView
-                url: urlf //"qrc:/3rdParty/pdfjs-1.7.225-dist/web/viewer.html"+"?file="+"qrc:/pdf/2.CURRICULUM-VITAE YESER.pdf"
+                url: urlcv //"qrc:/3rdParty/pdfjs-1.7.225-dist/web/viewer.html"+"?file="+"qrc:/pdf/2.CURRICULUM-VITAE YESER.pdf"
             }
         },
         State {
@@ -29,7 +29,7 @@ Pane {
             when: tabBar.currentIndex==2
             PropertyChanges {
                 target: webView
-                url: urlhn
+                url: urlcv
             }
         },
         State {

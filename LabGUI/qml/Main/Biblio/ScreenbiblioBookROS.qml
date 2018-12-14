@@ -89,7 +89,7 @@ Pane {
             when: tabBar.currentIndex==0
             PropertyChanges {
                 target: webView
-                url: urlROSF
+                url: urlcv
             }
         },
         State {
@@ -113,7 +113,7 @@ Pane {
             when: tabBar.currentIndex==3
             PropertyChanges {
                 target: webView
-                url: urlROSF
+                url: urlcv
             }
         }
     ]

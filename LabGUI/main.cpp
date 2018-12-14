@@ -63,22 +63,22 @@ int main(int argc, char *argv[])
             .arg(QDir::currentPath())
             .arg("WebResources/index.html");
     QString pdfcv    = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/CURRICULUMYESER.pdf");
-    QString pdfcraig = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/Robotica-JohnJCraig.pdf");
-    QString pdfhand  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/HandbookofRobotics-Springer.pdf");
-    QString pdffund  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/FundamentosDeRoboticaBarrientos2daEdicion.pdf");
-    QString pdfROSF  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/ROS_Robot_Programming_EN.pdf");
+//    QString pdfcraig = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/Robotica-JohnJCraig.pdf");
+//    QString pdfhand  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/HandbookofRobotics-Springer.pdf");
+//    QString pdffund  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/FundamentosDeRoboticaBarrientos2daEdicion.pdf");
+//    QString pdfROSF  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("pdf/ROS_Robot_Programming_EN.pdf");
     QUrl urlcv = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcv);
-    QUrl urlhn = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfhand);
-    QUrl urlf  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdffund);
-    QUrl urlc  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcraig);
-    QUrl urlRF  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfROSF);
+//    QUrl urlhn = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfhand);
+//    QUrl urlf  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdffund);
+//    QUrl urlc  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfcraig);
+//    QUrl urlRF  = QUrl::fromUserInput(pathToPDFjs + QString("?file=") + pdfROSF);
     QUrl urlgz = QUrl::fromUserInput(gazeboSimu);
     engine.rootContext()->setContextProperty("urlcv", urlcv);
     engine.rootContext()->setContextProperty("urlgzsv", urlgz);
-    engine.rootContext()->setContextProperty("urlhn", urlhn);
-    engine.rootContext()->setContextProperty("urlf", urlf);
-    engine.rootContext()->setContextProperty("urlcraig", urlc);
-    engine.rootContext()->setContextProperty("urlROSF", urlRF);
+//    engine.rootContext()->setContextProperty("urlhn", urlhn);
+//    engine.rootContext()->setContextProperty("urlf", urlf);
+//    engine.rootContext()->setContextProperty("urlcraig", urlc);
+//    engine.rootContext()->setContextProperty("urlROSF", urlRF);
 
 
 
@@ -89,9 +89,9 @@ int main(int argc, char *argv[])
      QUrl urlv1  = QUrl::fromUserInput(video1);
      engine.rootContext()->setContextProperty("urlv1", urlv1);
 
-     QString video2  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("video/video2.mp4");
-     QUrl urlv2  = QUrl::fromUserInput(video2);
-     engine.rootContext()->setContextProperty("urlv2", urlv2);
+//     QString video2  = QString("file:///%1/%2").arg(QDir::currentPath()).arg("video/video2.mp4");
+//     QUrl urlv2  = QUrl::fromUserInput(video2);
+//     engine.rootContext()->setContextProperty("urlv2", urlv2);
 
     engine.rootContext()->setContextProperty("availableStyles", QQuickStyle::availableStyles());
     engine.rootContext()->setContextProperty("launcher", &launch);
