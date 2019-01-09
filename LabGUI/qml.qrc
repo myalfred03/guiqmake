@@ -190,5 +190,14 @@
         <file>img/books.png</file>
         <file>img/FEC.png</file>
         <file>img/dialogsWel/bookabc.png</file>
+        <file>img/dialogsWel/GazeboCamSonar.png</file>
+        <file>img/dialogsWel/handbook.png</file>
+        <file>img/dialogsWel/ROSbook.png</file>
+        <file>img/dialogsWel/fingertip_cone.png</file>
+        <file>img/dialogsWel/robot_6R.png</file>
+        <file>img/dialogsWel/morf.png</file>
+        <file>img/dialogsWel/mat.png</file>
+        <file>img/dialogsWel/kin.png</file>
+        <file>img/dialogsWel/prog.png</file>
     </qresource>
 </RCC>

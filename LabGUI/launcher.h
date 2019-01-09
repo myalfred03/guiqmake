@@ -9,6 +9,7 @@ class launcher : public QObject
     Q_OBJECT
 public:
     launcher(QObject *parent = nullptr);
+    ~launcher();
 
     Q_INVOKABLE void launch();
     Q_INVOKABLE void launch2();
@@ -16,10 +17,13 @@ public:
 
 
 private:
+    QProcess *process_roscore;
     QProcess *process_rvizglabre;
     QProcess *process_robot_editor;
     QProcess *process_interpreter_xyz;
     QProcess *process_interpreter_gui;
+    QProcess *process_load_reachability;
+
 
 
 };

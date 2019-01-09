@@ -63,6 +63,7 @@ Dialog {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Label.Wrap
             font.pixelSize: 14
+
               }
 
         Label {
@@ -72,6 +73,7 @@ Dialog {
             font.bold: true
             wrapMode: Label.Wrap
             font.pixelSize: 14
+            horizontalAlignment: Text.AlignJustify
               }
             }
 }

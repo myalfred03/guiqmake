@@ -869,15 +869,24 @@ qrc_qml.cpp: ../LabGUI/qml.qrc \
 		../LabGUI/img/industrial-robot.png \
 		../LabGUI/img/FEC.png \
 		../LabGUI/img/model100x.png \
-		../LabGUI/img/dialogsWel/Barrientos.png \
-		../LabGUI/img/dialogsWel/ToR.png \
-		../LabGUI/img/dialogsWel/guide.png \
+		../LabGUI/img/dialogsWel/handbook.png \
 		../LabGUI/img/dialogsWel/simulgz.png \
-		../LabGUI/img/dialogsWel/bookabc.png \
-		../LabGUI/img/dialogsWel/simul.png \
-		../LabGUI/img/dialogsWel/NewmanROS.png \
+		../LabGUI/img/dialogsWel/GazeboCamSonar.png \
+		../LabGUI/img/dialogsWel/prog.png \
 		../LabGUI/img/dialogsWel/books.png \
+		../LabGUI/img/dialogsWel/bookabc.png \
+		../LabGUI/img/dialogsWel/guide.png \
+		../LabGUI/img/dialogsWel/kin.png \
+		../LabGUI/img/dialogsWel/mat.png \
+		../LabGUI/img/dialogsWel/simul.png \
+		../LabGUI/img/dialogsWel/ROSbook.png \
+		../LabGUI/img/dialogsWel/robot_6R.png \
 		../LabGUI/img/dialogsWel/Craig.png \
+		../LabGUI/img/dialogsWel/NewmanROS.png \
+		../LabGUI/img/dialogsWel/fingertip_cone.png \
+		../LabGUI/img/dialogsWel/ToR.png \
+		../LabGUI/img/dialogsWel/morf.png \
+		../LabGUI/img/dialogsWel/Barrientos.png \
 		../LabGUI/img/mainLab/menu.png \
 		../LabGUI/img/mainLab/drawer.png \
 		../LabGUI/img/developer/YE.jpg \

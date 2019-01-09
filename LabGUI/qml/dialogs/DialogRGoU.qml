@@ -47,7 +47,9 @@ Dialog {
                 width: parent.width
                 text: "<p>Para facilitar el uso del <strong>laboratorio virtual</strong> se ha elaborado un manual de uso del laboratorio en el cual se presentaran todas las funcionalidades con las que cuenta este mismo, contara con diferentes pruebas de ejemplo para verificar la efectividad de los recursos del laboratorio virtual y una mini gui&aacute; de uso base del <strong>Sistema operativo para Robots (ROS)</strong> para aquel estudiante o acad&eacute;mico interesado en seguir la investigaciones del uso de este sistema.</p>"
                 wrapMode: Label.Wrap
+//                font.family: "Times New Roman"
                 textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
                 }
 
             Label {
@@ -63,6 +65,37 @@ Dialog {
                 sourceSize.height: 50
                 fillMode: Image.PreserveAspectCrop
                 }
+
+            Label {
+                width: parent.width
+                text: " <p> Dentro de este <strong>LVR</strong>  se ha considerado la necesidad de transmitir los conocimientos b&aacute;sicos de ROS con el cual fue desarrollado esta herramienta virtual.</p>
+                       <p>El acad&eacute;mico interesado encontrara informaci&oacute;n puntual que, facilitara y aportara respuestas fundamentales del middleware ROS, esto con el fin de informar /motivar  y extender el uso de ROS a mas aplicaciones que se desarrollen dentro de la Universidad Nacional de Ingenier&iacute;a</p>
+                      "
+                wrapMode: Label.Wrap
+                textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
+                }
+            Image {
+                //width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "qrc:/img/dialogsWel/GazeboCamSonar.png"
+
+                sourceSize.width: 200
+                sourceSize.height: 200
+                fillMode: Image.PreserveAspectCrop
+                }
+
+            Label {
+                width: parent.width
+                text: "Aplicación de ROS y Gazebo en simulación de un Robot Humanoide, Competencia ROBOCUP"
+                font.family: "Times New Roman"
+                font.italic: true
+                wrapMode: Label.Wrap
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: 12
+                }
+
+
 
                      }
 

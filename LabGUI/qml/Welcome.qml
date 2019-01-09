@@ -462,7 +462,7 @@ Item {
                         horizontalAlignment: Text.AlignJustify
                         text:" <p>El <strong>laboratorio virtual para robotica industrial utilizando el middleware para robots ROS</strong> fue concebida su idea en las aulas de clases de la universidad nacional de Ingenieria en el modulo de Robotica industrial de la clase de Control Aplicado de la carrera de Ingenieria Electr&oacute;nica.</p>
                             <p>El tutor actual de este trabajo y catedratico de la clase de control aplicado <strong>MSc. Alejandro M&eacute;ndez T.</strong> detecto la falta de consolidacion de conocimiento al mostrar la matem&aacute;tica descriptiva de ciertos modelos de robots series.</p>
-                            <p>Por lo tanto en conjunto con el monografiante<strong> Br. Yeser A. Morales C.</strong> se elaboro un plan de trabajo para consolidar un laboratorio virtual de Robotica industrial para la universidad, esto debido a la carencia de consolidacion del conocimiento y por la falta de infraestructura fisica en la universidad.</p>"
+                            <p>Por lo tanto en conjunto con el monografiante<strong> Br. Yeser A. Morales C.</strong> se elaboro un plan de trabajo para el diseño e implementación de un laboratorio virtual de Robotica industrial para la universidad, esto debido a la carencia de consolidacion del conocimiento y por la falta de infraestructura fisica en la universidad.</p>"
                         wrapMode: Text.Wrap
                         textFormat: Text.RichText
                         font.pointSize: 15

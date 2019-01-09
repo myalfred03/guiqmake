@@ -60,8 +60,8 @@ Dialog {
                     //width: parent.width / 2
                     //anchors.horizontalCenter: parent.horizontalCenter
                     source: "qrc:/img/dialogsWel/Barrientos.png"
-                    sourceSize.width: 90
-                    sourceSize.height: 90
+                    sourceSize.width: 65
+                    sourceSize.height: 65
                     fillMode: Image.PreserveAspectCrop
                     }
                 Image {
@@ -69,8 +69,21 @@ Dialog {
                     // width: parent.width / 2
                     //anchors.horizontalCenter: parent.horizontalCenter
                     source: "qrc:/img/dialogsWel/Craig.png"
-                    sourceSize.width: 100
-                    sourceSize.height: 100
+                    sourceSize.width: 65
+                    sourceSize.height: 65
+                    fillMode: Image.PreserveAspectCrop
+                    }
+
+                Image {
+                    source: "qrc:/img/dialogsWel/handbook.png"
+                    sourceSize.width: 65
+                    sourceSize.height: 65
+                    fillMode: Image.PreserveAspectCrop
+                    }
+                Image {
+                    source: "qrc:/img/dialogsWel/ROSbook.png"
+                    sourceSize.width: 65
+                    sourceSize.height: 65
                     fillMode: Image.PreserveAspectCrop
                     }
                       }
@@ -79,6 +92,7 @@ Dialog {
                 text: "<p>Dentro del laboratorio se acceder&aacute;n a recursos bibliogr&aacute;ficos de importancia para el desarrollo y consolidaci&oacute;n de los conceptos b&aacute;sicos de la rob&oacute;tica industrial.</p>"
                 wrapMode: Label.Wrap
                 textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
                 }
 
             Image {
@@ -90,11 +104,57 @@ Dialog {
                 }
             Label {
                 width: parent.width
-                text: "<p>Es un libro que va dirigido tanto para los alumnos de ingenier&iacute;a y ciencias como para todo profesional que necesite conocer qu&eacute; es un robot, c&oacute;mo funciona y c&oacute;mo debe utilizarlo, retomando dentro de este libro parte de las cuatro secciones que compone el laboratorio virtaual de Rob&oacute;tica industrial, Morfolog&iacute;a del robot, Herramientas matem&aacute;ticas del Robot, Cinem&aacute;tica del robot, Programaci&oacute;n del robot.</p>"
+                text: "<p> <strong>Fundamentos de Rob&oacute;tica:</strong> Es un libro que va dirigido tanto para los alumnos de ingenier&iacute;a y ciencias como para todo profesional que necesite conocer qu&eacute; es un robot, c&oacute;mo funciona y c&oacute;mo debe utilizarlo, retomando dentro de este libro parte de las cuatro secciones que compone el laboratorio virtaual de Rob&oacute;tica industrial, Morfolog&iacute;a del robot, Herramientas matem&aacute;ticas del Robot, Cinem&aacute;tica del robot, Programaci&oacute;n del robot.</p>"
                 wrapMode: Label.Wrap
                 textFormat: Text.RichText
-
+                horizontalAlignment: Text.AlignJustify
                 }
+
+            Image {
+                width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/img/dialogsWel/Craig.png"
+                }
+            Label {
+                width: parent.width
+                text: "<p> <strong>Rob&oacute;tica de Craig:</strong> reúne contenidos cl&aacute;sicos de Rob&oacute;tica como lo hace el libro de Barrientos, de esta forma definimos que es necesario contar con varias fuentes para analizar un concepto, de tal manera que si en alguno de los libros es tedioso consolidar un concepto podemos revisar otra fuente.</p>
+                       <p>Ambos libros antes mencionados cuentan con ejemplos con c&aacute;lculos implementados por Software usando el Toolbox de Rob&oacute;tica para MATLAB elaborado por Peter Corke.</p>
+                      "
+                wrapMode: Label.Wrap
+                textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
+                }
+            Image {
+                width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/img/dialogsWel/handbook.png"
+                }
+            Label {
+                width: parent.width
+                text: "<p><strong>El Handbook (Manual) de Rob&oacute;tica:</strong> es una compilaci&oacute;n de los conceptos que involucra hacer rob&oacute;tica b&aacute;sica y rob&oacute;tica avanzada con 9 cap&iacute;tulos entre ellos Cinem&aacute;tica, din&aacute;mica, control de robots en movimiento, inteligencia Artificial entre otros. Este libro es fundamental para que el acad&eacute;mico se apropie de conceptos avanzados de R&oacute;botica </p>
+                      "
+                wrapMode: Label.Wrap
+                textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
+                }
+            Image {
+                width: parent.width / 2
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/img/dialogsWel/ROSbook.png"
+                }
+            Label {
+                width: parent.width
+                text: "<p><strong>ROS Robot Programming:</strong> Es un handbook (Manual) de programaci&oacute;n en ROS  que cuenta con una estructura de enseñanza muy detallada para apropiarse de la Heur&iacute;stica necesaria para comprender el middleware ROS, escrito por la empresa Española ROBOTIS Co., LTD. </p>
+                      <p>Este libro esta basado en experiencias que el equipo a acumulado en los proyectos desarrollados por la propia empresa, proveyendo una gui&aacute; que cubre los aspectos necesarios para un principiante en ROS, abarca temas como, sistemas embebidos con ROS, robots m&oacute;viles y brazos roboticos programados con ROS </p>
+                      "
+                wrapMode: Label.Wrap
+                textFormat: Text.RichText
+                horizontalAlignment: Text.AlignJustify
+                }
+
 
                      }
 

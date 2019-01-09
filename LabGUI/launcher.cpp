@@ -4,13 +4,25 @@
 
 launcher::launcher(QObject *parent) :
     QObject(parent),
+        process_roscore(new QProcess(this)),
         process_rvizglabre(new QProcess(this)),
         process_robot_editor(new QProcess(this)),
         process_interpreter_xyz(new QProcess(this)),
-        process_interpreter_gui(new QProcess(this))
-
+        process_interpreter_gui(new QProcess(this)),
+        process_load_reachability(new QProcess(this))
 {
+    process_roscore->start("bash",QStringList() << "-i" << "-c" << \
+                     "roscore");
 
+}
+
+launcher::~launcher(){
+    process_roscore->kill();
+    process_robot_editor->kill();
+    process_interpreter_gui->kill();
+    process_rvizglabre->kill();
+    process_interpreter_xyz->kill();
+    process_load_reachability->kill();
 }
 
 void launcher::launch()
@@ -20,13 +32,21 @@ void launcher::launch()
     process_interpreter_gui->kill();
     process_rvizglabre->kill();
     process_interpreter_xyz->kill();
+    process_load_reachability->kill();
 
-    process_rvizglabre =      new QProcess();
-    process_interpreter_xyz = new QProcess();
+    process_rvizglabre =        new QProcess();
+    process_interpreter_xyz =   new QProcess();
+    process_load_reachability = new QProcess();
+
     process_rvizglabre->start("bash",QStringList() << "-i" << "-c" << \
                      "rosrun rvizglabre rvizglabre");
+
     process_interpreter_xyz->start("bash",QStringList() << "-i" << "-c" << \
                      "rosrun interpreter_xyz_rpy interpreter_xyz_rpy");
+
+    process_load_reachability->start("bash",QStringList() << "-i" << "-c" << \
+                     "rosrun map_creator load_reachability_map");
+
 //    m_process->start("gnome-terminal --geometry=0x0+0+0 --command \"roslaunch carmen_sim navigation.launch\" ");
 //                "gnome-terminal --geometry=50x10-0-10 -x bash -c \"roslaunch rvizglabre launchlab.launch\" ");
 
@@ -42,6 +62,9 @@ void launcher::launch2()
     process_rvizglabre->kill();
     process_interpreter_xyz->kill();
     process_interpreter_gui->kill();
+    process_load_reachability->kill();
+    process_robot_editor->kill();
+
 
     process_robot_editor = new QProcess();
     process_robot_editor->start("bash",QStringList() << "-i" << "-c" << \
@@ -78,20 +101,29 @@ void launcher::launch3()
     process_interpreter_gui->kill();
     process_rvizglabre->kill();
     process_interpreter_xyz->kill();
+    process_load_reachability->kill();
+
 
     process_rvizglabre = new QProcess();
     process_interpreter_xyz = new QProcess();
     process_interpreter_gui = new QProcess();
+    process_load_reachability = new QProcess();
 
     process_rvizglabre->start("bash",QStringList() << "-i" << "-c" << \
                      "rosrun rvizglabre rvizglabre");
+
     process_interpreter_gui->start("bash",QStringList() << "-i" << "-c" << \
                      "rosrun interpreter_gui interpreter_gui");
+
     process_interpreter_xyz->start("bash",QStringList() << "-i" << "-c" << \
                      "rosrun interpreter_xyz_rpy interpreter_xyz_rpy");
+
+    process_load_reachability->start("bash",QStringList() << "-i" << "-c" << \
+                     "rosrun map_creator load_reachability_map");
+
+
 //    m_process->start("gnome-terminal --geometry=0x0+0+0 --command \"roslaunch carmen_sim navigation.launch\" ");
 //                "gnome-terminal --geometry=50x10-0-10 -x bash -c \"roslaunch rvizglabre launchlab.launch\" ");
-    process_robot_editor->kill();
 
 
 ////    system("gnome-terminal -x bash -c 'source ~/ros_qtc_plugin/devel/setup.bash;"
