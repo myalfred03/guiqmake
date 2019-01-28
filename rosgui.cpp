@@ -1,5 +1,6 @@
 #include "rosgui.h"
 #include "ui_rosgui.h"
+
 //#include "secondwindow.h"
 const double FACTOR = 1;
 
@@ -10,7 +11,8 @@ ROSGUI::ROSGUI(QWidget *parent) :
 {
     ui->setupUi(this);
     QPixmap pix(":/images/img/Uni.jpg");
-    ui->label_3->setPixmap(pix);
+    ui->label_3->setPixmap(pix.scaled(ui->label_3->size(),Qt::KeepAspectRatio));
+
 
         connect(ui->xSlider, SIGNAL(valueChanged(int)), SLOT(updateSpinboxes()));
         connect(ui->ySlider, SIGNAL(valueChanged(int)), SLOT(updateSpinboxes()));
