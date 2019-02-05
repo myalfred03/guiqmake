@@ -14,7 +14,11 @@ Item {
     property bool vis: false
 //    property bool vismenu: true
 
-
+    function showSubMenu(url) {
+        if (stackView.depth > 1)
+            stackView.pop()
+        stackView.push(url)
+    }
 
     Image {
         id:imagef
@@ -94,6 +98,8 @@ Item {
                         mRsimu.vis=false
                         mRmorfo.vis=false
                         panemenu.visible = true
+                        showSubMenu("qrc:/qml/Main/Biblio/ScreenbiblioGuideLAB.qml")
+
                                 }
                           }
                 TabButton {
@@ -105,6 +111,8 @@ Item {
                         mRsimu.vis=false
                         mRmorfo.vis=false
                         panemenu.visible = true
+                        showSubMenu("qrc:/qml/Main/Model/ScreenModelTheoryR.qml")
+
                                }
                           }
                 TabButton {
@@ -116,6 +124,8 @@ Item {
                         mRsimu.vis=false
                         mRmorfo.vis=true
                         panemenu.visible = true
+                        showSubMenu("qrc:/qml/Main/Morfo/ScreenMorfoTheoryR.qml")
+
                                }
                           }
                 TabButton {
@@ -127,6 +137,8 @@ Item {
                         mRsimu.vis=false
                         mRmorfo.vis=false
                         panemenu.visible = true
+                        showSubMenu("qrc:/qml/Main/Kinem/ScreenKinemTheoryR.qml")
+
                                }
                           }
                 TabButton {
@@ -141,6 +153,8 @@ Item {
                         mRsimu.vis=true
                         mRmorfo.vis=false
                         panemenu.visible = true
+                        showSubMenu("qrc:/qml/Main/Simu/ScreenSimuTheoryR.qml")
+
                                }
                            }
             } //tabbar

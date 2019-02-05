@@ -75,7 +75,7 @@ Pane {
 
         RoundButton {
             id: modelInfo
-            text: qsTr("Mas información")
+            text: qsTr("Videos Morfologia")
             checkable: true
             Layout.fillWidth: true
             Material.accent: "#41cd52"

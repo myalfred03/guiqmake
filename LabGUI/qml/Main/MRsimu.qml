@@ -71,7 +71,7 @@ Pane {
                     }
         RoundButton {
             id: simuInfo
-            text: qsTr("Mas información")
+            text: qsTr("Simular con RViz")
             checkable: true
             Layout.fillWidth: true
             Material.accent: "#41cd52"
@@ -85,7 +85,7 @@ Pane {
 
         RoundButton {
             id: simuSimu
-            text: qsTr("Simula tu Robot")
+            text: qsTr("Simular con Gazebo")
             checkable: true
             Layout.fillWidth: true
             Material.accent: "#41cd52"

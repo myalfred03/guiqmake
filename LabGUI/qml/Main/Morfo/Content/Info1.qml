@@ -71,11 +71,11 @@ import QtQuick.Controls.Material 2.0
             onPlaybackStateChanged: {
                 if(player.playbackState === 0 || player.playbackState === 2) {
                     playPauseButton.iconSource="qrc:/img/player/play.png"
-                    backgroundimage.source=""
+                    //backgroundimage.source=""
                 }
                 else {
                     playPauseButton.iconSource="qrc:/img/player/pause.png"
-                    backgroundimage.source=""
+                   // backgroundimage.source=""
                 }
             }
         }

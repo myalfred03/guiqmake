@@ -23,14 +23,14 @@ Pane {
         Material.theme: Material.Light
 
         TabButton {
-            text: qsTr("Extracto de articulo 1")
+            text: qsTr("Video 1 robot ABB")
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Morfo/Content/Info1.qml")
                        }
                   }
 
         TabButton {
-            text: qsTr("Extracto de articulo 2")
+            text: qsTr("Video 2 robot Industrias")
             onClicked: {
                 showSubMenu("qrc:/qml/Main/Morfo/Content/Info2.qml")
                        }

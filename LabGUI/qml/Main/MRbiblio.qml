@@ -28,11 +28,11 @@ Pane {
 
         ButtonGroup {
             id: menuButtons
-
         }
 
         RoundButton {
             id: biblioGuide
+            checked: true
             text: qsTr("Guia de uso de LAB")
             checkable: true
             Layout.fillWidth: true

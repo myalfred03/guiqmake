@@ -155,12 +155,12 @@ Item {
 
                 Text {
                     id: txtSystem2
-                    x: 444
+                    x: 430
                     y: 44
                     width: 440
                     height: 34
                     color: "#ffffff"
-                    text: qsTr("Ingeniería Electrónica\nFacultad de electrotecnia y computación")
+                    text: qsTr("Facultad de electrotecnia y computación \nIngeniería Electrónica")
                     horizontalAlignment: Text.AlignHCenter
                     z: 3
                     font.pointSize: 17
@@ -168,15 +168,15 @@ Item {
                     font.bold: true
                 }
 
-                Image {
-                    id: image
-                    x: 239
-                    y: -6
-                    width: 126
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "qrc:/img/FEC.png"
-                }
+//                Image {
+//                    id: image
+//                    x: 239
+//                    y: -6
+//                    width: 126
+//                    height: 100
+//                    fillMode: Image.PreserveAspectFit
+//                    source: "qrc:/img/FEC.png"
+//                }
             }
 
             Item {
